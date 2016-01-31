@@ -27,5 +27,9 @@ angular.module('Portfolio').config(function($routeProvider) {
         .when('/contact', {
             templateUrl : 'pages/contact.html',
             controller  : 'ContactController'
+        })
+    // route for the contact page
+        .otherwise({
+            templateUrl: '404.html'    
         });
 });
