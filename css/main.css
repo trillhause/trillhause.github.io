@@ -126,9 +126,24 @@ textarea {
         padding-top: 12px;
         padding-bottom: 12px;
     }
-    nav {
+    #fixed-position {
         position: fixed;
+        
+        height: 100%;
+        width: 20%;
     }
+    .brand {
+        margin-bottom: 50%;
+    }
+    .main-container {
+        padding-left: 0%;
+    }
+}
+
+.main-container {
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 2%;
 }
 
 
