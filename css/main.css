@@ -105,12 +105,50 @@ textarea {
    ========================================================================== */
 
 
-/* Resoponsive Vertical Navbar */
+/*index.html*/
+
+.make-fullscreen {
+  height: 100%
+}
 
 #main-content,
 #navigationbar {
   padding: 3%;
 }
+
+
+/*home.html*/
+
+.home-outer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: #333333;
+}
+
+.home-inner {
+  text-align: center
+}
+
+.home-outer h1 {
+  font-family: avenir;
+  font-weight: 900;
+  font-size: 2em;
+  letter-spacing: 10px;
+  color: white
+}
+
+.home-outer p {
+  font-family: avenir;
+  font-weight: 300;
+  font-size: 1.2em;
+  letter-spacing: 2px;
+  color: white
+}
+
+
+/* Resoponsive Vertical Navbar */
 
 .sidebar-nav .navbar li a {
   font-family: Avenir;
@@ -121,6 +159,7 @@ textarea {
 
 .sidebar-nav .navbar li a:hover {
   text-decoration: underline;
+  background-color: white;
 }
 
 .sidebar-nav .navbar li a:visited {
@@ -190,7 +229,7 @@ textarea {
     width: 10em;
   }
   .sidebar-nav {
-    position: fixed;
+    margin-left: 5%;
   }
   .brand-image {
     position: relative;
