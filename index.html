@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app="Portfolio" class="no-js" lang="">
+<html ng-app="Portfolio" class="no-js" lang="" style="height:100%">
 
 <head>
   <meta charset="utf-8">
@@ -24,43 +24,47 @@
 
 </head>
 
-<body ng-controller="MainController" style="background-color: white">
+<body ng-controller="MainController" style="background-color: white; height:100%">
   <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
   <!-- Add your site or application content here -->
-  <div class="container-fluid">
-    <div class="row main-container">
-      <div class="col-sm-3" id="navigationbar">
-        <nav class="sidebar-nav">
-          <ul class="nav navbar-nav navbar">
+  <div class="container-fluid make-fullscreen">
+    <div class="row main-container make-fullscreen">
+      <div class=" col-sm-3 " id="navigationbar ">
+        <nav class="sidebar-nav ">
+          <ul class="nav navbar-nav navbar ">
             <li>
-              <a href="#/">
-                <img src="img/mg_black.png" class="brand-image">
+              <a href="#/ " class="homelink">
+                <img src="img/mg_black.png " class="brand-image ">
               </a>
             </li>
             <br>
-            <li><a href="#/work">WORK</a></li>
-            <li><a href="#/bio">BIO</a></li>
-            <li><a href="#/updates">BLOG</a></li>
-            <li><a href="#/contact">CONTACT</a></li>
+            <li><a href="#/work" class="otherlinks">WORK</a></li>
+            <li><a href="#/bio" class="otherlinks">BIO</a></li>
+            <li><a href="#/updates" class="otherlinks">BLOG</a></li>
+            <li><a href="#/contact" class="otherlinks">CONTACT</a></li>
           </ul>
         </nav>
       </div>
-      <div class="col-sm-9" id="main-content">
-        <div ng-view></div>
+      <!--      <div style="position:fixed; height:80%; background-color:red; z-index:100"></div>-->
+      <div class="col-sm-9 make-fullscreen" id="main-content">
+        <div ng-view class="make-fullscreen">
+        </div>
       </div>
     </div>
   </div>
-  <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+  </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-1.12.0.min.js "></script>
   <script>
-    window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')
+    window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js "><\/script>')
   </script>
-  <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script>
-  <script src="js/routes.js"></script>
-  <script src="js/controller.js"></script>
+  <script src="js/plugins.js "></script>
+  <script src="js/main.js "></script>
+  <script src="js/routes.js "></script>
+  <script src="js/controller.js "></script>
   <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
   <script>
     (function (b, o, i, l, e, r) {
