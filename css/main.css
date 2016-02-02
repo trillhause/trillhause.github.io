@@ -201,6 +201,43 @@ typedjs {
   color: #333333
 }
 
+.bold {
+  font-weight: 500
+}
+
+
+/*bio.html*/
+
+.bio-outer {
+  padding: 5%;
+}
+
+.bio-outer h2 {
+  font-family: avenir;
+  font-weight: 600;
+  font-size: 1.5em;
+  letter-spacing: 1px;
+  color: #333333
+}
+
+.bio-outer p {
+  font-family: avenir;
+  font-size: 1.0em;
+  font-weight: 100;
+  letter-spacing: 1px;
+  word-spacing: 3px;
+  color: #333333;
+  padding-bottom: 15px;
+}
+
+h1 {
+  font-family: avenir;
+  font-weight: 900;
+  font-size: 2em;
+  letter-spacing: 10px;
+  color: #333333
+}
+
 
 /* Resoponsive Vertical Navbar */
 
@@ -252,14 +289,19 @@ typedjs {
     right: 0;
     top: 0;
     left: 0;
-    margin-right: auto;
-    margin-left: auto;
-    background-color: white
+    margin-right: 3%;
+    margin-left: 3%;
+    background-color: white;
   }
   #main-content {
     padding-top: 188px;
   }
-  .home-outer {}
+  .bio-outer {
+    text-align: justify
+  }
+  .bio-outer h2 {
+    text-align: center
+  }
 }
 
 @media (min-width: 768px) {
