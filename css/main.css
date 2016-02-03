@@ -209,11 +209,12 @@ typedjs {
 /*bio.html*/
 
 .bio-outer {
-  padding: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .bio-outer h2 {
-  font-family: avenir;
+  font-family: 'Source Sans Pro';
   font-weight: 600;
   font-size: 1.5em;
   letter-spacing: 1px;
@@ -221,9 +222,9 @@ typedjs {
 }
 
 .bio-outer p {
-  font-family: avenir;
+  font-family: 'Source Sans Pro';
   font-size: 1.0em;
-  font-weight: 100;
+  font-weight: 300;
   letter-spacing: 1px;
   word-spacing: 3px;
   color: #333333;
