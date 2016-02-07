@@ -28,6 +28,17 @@ angular.module('Portfolio').controller('HomeController', function () {
   };
 });
 
+angular.module('Portfolio').controller('MainController', function () {
+  this.message = "Main";
+  this.tab = 0;
+  this.selectTab = function (value) {
+    this.tab = value;
+  }
+  this.isTab = function (value) {
+    return this.tab === value;
+  }
+});
+
 angular.module('Portfolio').controller('WorkController', function () {
   this.message = 'Project Showcase';
 });

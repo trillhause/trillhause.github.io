@@ -23,7 +23,7 @@
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-route.js"></script>
 </head>
 
-<body style="background-color: white; height:100%">
+<body style="background-color: white; height:100%" ng-controller="MainController as main">
   <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -34,15 +34,14 @@
         <nav class="sidebar-nav ">
           <ul class="nav navbar-nav navbar ">
             <li>
-              <a href="#/ " class="homelink">
+              <a href="#/ " ng-click="main.selectTab(0)" class="homelink">
                 <img src="img/mg_black.png " class="brand-image ">
               </a>
             </li>
-            <br>
-            <li><a href="#/work" class="otherlinks">WORK</a></li>
-            <li><a href="#/bio" class="otherlinks">BIO</a></li>
-            <li><a href="#/updates" class="otherlinks">BLOG</a></li>
-            <li><a href="#/contact" class="otherlinks">CONTACT</a></li>
+            <li ng-class="{underline: main.isTab(1)}"><a href="#/work" ng-click="main.selectTab(1)" class="otherlinks">WORK</a></li>
+            <li ng-class="{underline: main.isTab(2)}"><a href="#/bio" ng-click="main.selectTab(2)" class="otherlinks">BIO</a></li>
+            <li ng-class="{underline: main.isTab(3)}"><a href="#/updates" ng-click="main.selectTab(3)" class="otherlinks">BLOG</a></li>
+            <li ng-class="{underline: main.isTab(4)}"><a href="#/contact" ng-click="main.selectTab(4)" class="otherlinks">CONTACT</a></li>
           </ul>
         </nav>
       </div>

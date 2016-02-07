@@ -1,3 +1,4 @@
+<!--
 <form name="contactForm" method="post" ng-submit="contactForm.$valid && contact.sendMessage()" novalidate>
   <div class="form-group">
     <input type="text" id="name" ng-model='contact.visitor.name' class="form-control" placeholder="Name" required>
@@ -16,33 +17,7 @@
   <p ng-show="contact.success">Thanks for getting in touch!</p>
   <p ng-show="contact.error">Something wrong happened!, please try again.</p>
 </form>
-
-
-<!--
-
-
-  $response = array ('success' => false);
-  $formData = file_get_contents( 'php://input' );
-  $data = json_decode($formData);
-  if($data->submit) {
-    $name = $data->name;
-    $email = $data->email;
-    $message = $data->message;
-    if ($name!=''&& $email!='' &&$message!=''){
-      $mailTo = 'gabanimillin@gmail.com';
-      $subject = 'New contact form submission';
-      $body  = 'From: ' . $name . "\n";
-      $body .= 'Email: ' . $email . "\n";
-      $body .= "Message:\n" . $message . "\n\n";
-      
-      $success = mail( $mailTo, $subject, $body );
-      
-      if ( $success ) {
-         $response[ 'success' ] = true;
-      }
-    }
-  }
-echo json_encode( $response );
+-->
 <?php
         if (isset($_POST["submit"])) {
             $name = $_POST['name'];
@@ -126,4 +101,4 @@ echo json_encode( $response );
         <?php echo $result; ?>
       </div>
     </div>
-  </form>-->
+  </form>
