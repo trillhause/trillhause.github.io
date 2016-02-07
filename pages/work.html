@@ -1,7 +1,14 @@
 <div class="bio-outer">
-  <div class=" bio-inner">
-    <h2 style="font-size:2em">Work</h2>
-
+  <div class=" bio-inner" ng-repeat="project in work.projects">
+    <h2 style="font-size:2em">{{project.title}}</h2>
+    <br>
+    <div class="row">
+      <div class="col-md-8">
+        <p ng-bind-html="project.content"></p>
+      </div>
+      <div class="col-md-4">
+      </div>
+    </div>
   </div>
 </div>
 

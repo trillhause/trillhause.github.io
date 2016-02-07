@@ -39,9 +39,20 @@ angular.module('Portfolio').controller('MainController', function () {
   }
 });
 
-angular.module('Portfolio').controller('WorkController', function () {
+angular.module('Portfolio').controller('WorkController', ['$sce', function ($sce) {
   this.message = 'Project Showcase';
-});
+  this.projects = [
+    {
+      title: "Bricks and Bytes",
+      content: $sce.trustAsHtml("<em>Bricks & Bytes was awarded second place at PCH Hackathon</em> <br><br>Bricks & Bytes is an innovative hardware platform that allows children to learn logic of programming, without the language. <br><br>Bricks & Bytes was developed at PCH Hackathon in a collaboration with seven other mechatronics student. Project includes 7 interchangeable modules that stimulates computer science concepts with real I/O feedback. <br><br>Each module called brick contains an Arduino micro-controller board to manage peripherals and UART communication, with a  designated \"transmitter\" module relaying information to an Android/iOS device via Bluetooth 2.0. (Communication between bricks are established using UART with the last brick transmitting any results to an Android/iOS application via Bluetooth.) <br><br>The purpose of the project was to make programming feel more intuitive and organic, allowing young users to familiarize themselves with the fundamental principles of the software development such as control flow and debugging."),
+    },
+    {
+      title: "uClicker",
+      content: $sce.trustAsHtml("uClicker is a portable hardware platform that allows students to answer iClicker questions from their phones. <br><br> uClicker was developed at Hack The North 2015 in collaboration with two other engineering students. It uses an Arduino micro-controller board, an RF Link transmitter and an RF Link receiver. <br><br>When the user selects an option (options can be selected using an Android app), signals are sent to the iClicker base station using the RF Link transmitter. The RF Link receiver then reads data from the base station and other iClickers which adds more features like finding  the most selected answer, mass changing/randomizing other student's answers, jamming signals during a question, etc. Using our open source platform, users are able to hack and customize their uClicker with desired functionalities. <br><br>The purpose of this project was to find an affordable alternative to iClicker and now it is possible with uClicker."),
+    },
+
+  ];
+}]);
 
 angular.module('Portfolio').controller('BioController', function () {
   this.message = 'Nothing';
