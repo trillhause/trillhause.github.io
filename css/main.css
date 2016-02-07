@@ -240,6 +240,17 @@ h1 {
 }
 
 
+/*contact.html*/
+
+.ng-invalid.ng-dirty {
+  border-color: firebrick;
+}
+
+.ng-valid.ng-dirty {
+  border-color: darkseagreen;
+}
+
+
 /* Resoponsive Vertical Navbar */
 
 .sidebar-nav .navbar li a {

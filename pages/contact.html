@@ -1,46 +1,91 @@
-<?php
-    if (isset($_POST["submit"])) {
-        $name = $_POST['name'];
-        $email = $_POST['email'];
-        $message = $_POST['message'];
-        $human = intval($_POST['human']);
-        $from = 'Demo Contact Form'; 
-        $to = 'example@bootstrapbay.com'; 
-        $subject = 'Message from Contact Demo ';
-        
-        $body = "From: $name\n E-Mail: $email\n Message:\n $message";
- 
-        // Check if name has been entered
-        if (!$_POST['name']) {
-            $errName = 'Please enter your name';
-        }
-        
-        // Check if email has been entered and is valid
-        if (!$_POST['email'] || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-            $errEmail = 'Please enter a valid email address';
-        }
-        
-        //Check if message has been entered
-        if (!$_POST['message']) {
-            $errMessage = 'Please enter your message';
-        }
-        //Check if simple anti-bot test is correct
-        if ($human !== 5) {
-            $errHuman = 'Your anti-spam is incorrect';
-        }
- 
-// If there are no errors, send the email
-if (!$errName && !$errEmail && !$errMessage && !$errHuman) {
-    if (mail ($to, $subject, $body, $from)) {
-        $result='<div class="alert alert-success">Thank You! I will be in touch</div>';
-    } else {
-        $result='<div class="alert alert-danger">Sorry there was an error sending your message. Please try again later</div>';
-    }
-}
-    }
-?>
+<form name="contactForm" method="post" ng-submit="contactForm.$valid && contact.sendMessage()" novalidate>
+  <div class="form-group">
+    <input type="text" id="name" ng-model='contact.visitor.name' class="form-control" placeholder="Name" required>
+  </div>
 
-  <form class="form-horizontal" role="form" method="post" action="#/contact">
+  <div class="form-group">
+    <input type="email" id="email" ng-model='contact.visitor.email' class="form-control" placeholder="Email" required>
+  </div>
+
+  <div class="form-group">
+    <textarea id="message" ng-model='contact.visitor.message' class="form-control" rows="6" placeholder="Dear Millin... " required></textarea>
+  </div>
+  This form is {{contactForm.$valid}}
+  <br> {{contact.visitor}}
+  <button type="submit" name="submit" class="btn btn-default">Submit</button>
+  <p ng-show="contact.success">Thanks for getting in touch!</p>
+  <p ng-show="contact.error">Something wrong happened!, please try again.</p>
+</form>
+
+
+<!--
+
+
+  $response = array ('success' => false);
+  $formData = file_get_contents( 'php://input' );
+  $data = json_decode($formData);
+  if($data->submit) {
+    $name = $data->name;
+    $email = $data->email;
+    $message = $data->message;
+    if ($name!=''&& $email!='' &&$message!=''){
+      $mailTo = 'gabanimillin@gmail.com';
+      $subject = 'New contact form submission';
+      $body  = 'From: ' . $name . "\n";
+      $body .= 'Email: ' . $email . "\n";
+      $body .= "Message:\n" . $message . "\n\n";
+      
+      $success = mail( $mailTo, $subject, $body );
+      
+      if ( $success ) {
+         $response[ 'success' ] = true;
+      }
+    }
+  }
+echo json_encode( $response );
+<?php
+        if (isset($_POST["submit"])) {
+            $name = $_POST['name'];
+            $email = $_POST['email'];
+            $message = $_POST['message'];
+            $human = intval($_POST['human']);
+            $from = 'asfsa'; 
+            $to = 'gabanimillin@gmail.com'; 
+            $subject = 'Message from Millin Gab site ';
+
+            $body = "From: $name\n E-Mail: $email\n Message:\n $message";
+
+            // Check if name has been entered
+            if (!$_POST['name']) {
+                $errName = 'Please enter your name';
+            }
+
+            // Check if email has been entered and is valid
+            if (!$_POST['email'] || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+                $errEmail = 'Please enter a valid email address';
+            }
+
+            //Check if message has been entered
+            if (!$_POST['message']) {
+                $errMessage = 'Please enter your message';
+            }
+            //Check if simple anti-bot test is correct
+            if ($human !== 5) {
+                $errHuman = 'Your anti-spam is incorrect';
+            }
+
+            // If there are no errors, send the email
+            if (!$errName && !$errEmail && !$errMessage && !$errHuman) {
+            if (mail ($to, $subject, $body, $from)) {
+                $result='<div class="alert alert-success">Thank You! I will be in touch</div>';
+            } else {
+                $result='<div class="alert alert-danger">Sorry there was an error sending your message. Please try again later</div>';
+            }
+          }
+        }
+      ?>
+
+  <form class="form-horizontal" role="form" method="post" action="">
     <div class="form-group">
       <label for="name" class="col-sm-2 control-label">Name</label>
       <div class="col-sm-10">
@@ -81,4 +126,4 @@ if (!$errName && !$errEmail && !$errMessage && !$errHuman) {
         <?php echo $result; ?>
       </div>
     </div>
-  </form>
+  </form>-->

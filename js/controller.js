@@ -1,8 +1,8 @@
 // create the controller and inject Angular's $scope
-angular.module('Portfolio').controller('MainController', function ($scope) {
+angular.module('Portfolio').controller('HomeController', function () {
   // create a message to display in our view
-  $scope.message = 'Everyone come and see how good I look!';
-  $scope.texttyping = ["logically minded and creative at heart^5000", "design oriented developer^5000", "street smart engineer^5000"]
+  this.message = 'Everyone come and see how good I look!';
+  this.texttyping = ["logically minded and creative at heart^5000", "design oriented developer^5000", "street smart engineer^5000"]
 }).directive('typedjs', function () {
   return {
     restrict: 'E',
@@ -28,19 +28,33 @@ angular.module('Portfolio').controller('MainController', function ($scope) {
   };
 });
 
-
-angular.module('Portfolio').controller('WorkController', function ($scope) {
-  $scope.message = 'Showing off my work mofocas';
+angular.module('Portfolio').controller('WorkController', function () {
+  this.message = 'Project Showcase';
 });
 
-angular.module('Portfolio').controller('BioController', function ($scope) {
-  $scope.message = 'Watch me Whip!! Watch me Nae Nae!!';
+angular.module('Portfolio').controller('BioController', function () {
+  this.message = 'Nothing';
 });
 
-angular.module('Portfolio').controller('UpdatesController', function ($scope) {
-  $scope.message = 'Find out more about me';
+angular.module('Portfolio').controller('UpdatesController', function () {
+  this.message = 'Find out more about my life';
 });
 
-angular.module('Portfolio').controller('ContactController', function ($scope) {
-  $scope.message = 'Contact me';
-});
+angular.module('Portfolio').controller('ContactController', ['$http', function ($http) {
+  var contact = this;
+  this.success = false;
+  this.error = false;
+  this.visitor = {};
+  this.sendMessage = function () {
+    $http({
+      method: 'POST',
+      url: '/php/processContactForm.php',
+      data: contact.visitor,
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      }
+    }).success(function (data) {
+      contact.success = true;
+    });
+  };
+}]);
