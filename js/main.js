@@ -13,4 +13,5 @@ $(document).ready(function () {
     function (e) {
       $("#main-content").removeClass("make-fullscreen")
     });
+
 });

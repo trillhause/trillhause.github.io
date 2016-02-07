@@ -41,10 +41,40 @@ angular.module('Portfolio').controller('MainController', function () {
 
 angular.module('Portfolio').controller('WorkController', ['$sce', function ($sce) {
   this.message = 'Project Showcase';
+  this.image = 0;
+  this.setImage = function (value) {
+    this.image = value;
+  }
   this.projects = [
     {
       title: "Bricks and Bytes",
       content: $sce.trustAsHtml("<em>Bricks & Bytes was awarded second place at PCH Hackathon</em> <br><br>Bricks & Bytes is an innovative hardware platform that allows children to learn logic of programming, without the language. <br><br>Bricks & Bytes was developed at PCH Hackathon in a collaboration with seven other mechatronics student. Project includes 7 interchangeable modules that stimulates computer science concepts with real I/O feedback. <br><br>Each module called brick contains an Arduino micro-controller board to manage peripherals and UART communication, with a  designated \"transmitter\" module relaying information to an Android/iOS device via Bluetooth 2.0. (Communication between bricks are established using UART with the last brick transmitting any results to an Android/iOS application via Bluetooth.) <br><br>The purpose of the project was to make programming feel more intuitive and organic, allowing young users to familiarize themselves with the fundamental principles of the software development such as control flow and debugging."),
+      images: [
+        {
+          id: 0,
+          source: "img/bricksandbytes/1.jpg"
+        },
+        {
+          id: 1,
+          source: "img/bricksandbytes/2.jpg"
+        },
+        {
+          id: 2,
+          source: "img/bricksandbytes/3.jpg"
+        },
+        {
+          id: 3,
+          source: "img/bricksandbytes/4.jpg"
+        },
+        {
+          id: 4,
+          source: "img/bricksandbytes/5.jpg"
+        },
+        {
+          id: 5,
+          source: "img/bricksandbytes/6.jpg"
+        },
+      ],
     },
     {
       title: "uClicker",
