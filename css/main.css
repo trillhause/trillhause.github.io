@@ -304,8 +304,8 @@ h1 {
     right: 0;
     top: 0;
     left: 0;
-    margin-right: 3%;
-    margin-left: 3%;
+    margin-right: auto;
+    margin-left: auto;
     background-color: white;
   }
   #main-content {
@@ -353,6 +353,12 @@ h1 {
   }
   .home-outer {
     border-left: 1px solid;
+  }
+}
+
+@media (min-width: 950px) {
+  .sidebar-nav {
+    left: -1.5em;
   }
 }
 
