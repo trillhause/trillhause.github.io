@@ -6,22 +6,16 @@
   echo $data->email;
   echo $data->message;
   if($data->submit) {
-    $name = $data->name;
+   $name = $data->name;
     $email = $data->email;
     $message = $data->message;
-    if ($name!=''&& $email!='' &&$message!=''){
-      $mailTo = 'gabanimillin@gmail.com';
-      $subject = 'New contact form submission';
-      $body  = 'From: ' . $name . "\n";
-      $body .= 'Email: ' . $email . "\n";
-      $body .= "Message:\n" . $message . "\n\n";
-      $from = $name;
-      
-      $success = mail( $mailTo, $subject, $body, $from );
-      if ( $success ) {
-         $response[ 'success' ] = true;
-      }
-    }
+    $from = "$name"; 
+    $to = 'gabanimillin@gmail.com'; 
+    $subject = 'Message from Millin Gab site ';
+    $body = "From: $name\n E-Mail: $email\n Message:\n $message";
+    if (mail ($to, $subject, $body, $from)) {
+      $response[ 'success' ] = true;
+    } 
   }
 echo json_encode( $response );
 ?>
