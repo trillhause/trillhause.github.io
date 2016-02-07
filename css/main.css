@@ -104,6 +104,10 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+.underline {
+  text-decoration: underline;
+}
+
 
 /*index.html*/
 
