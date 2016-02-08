@@ -41,14 +41,17 @@ angular.module('Portfolio').controller('MainController', function () {
 
 angular.module('Portfolio').controller('WorkController', ['$sce', function ($sce) {
   this.message = 'Project Showcase';
-  this.image = 0;
-  this.setImage = function (value) {
-    this.image = value;
+  this.setImage = function (project, value) {
+    project.current = value;
+  }
+  this.isNotGallery = function (value) {
+    return value === 1;
   }
   this.projects = [
     {
       title: "Bricks and Bytes",
       content: $sce.trustAsHtml("<em>Bricks & Bytes was awarded second place at PCH Hackathon</em> <br><br>Bricks & Bytes is an innovative hardware platform that allows children to learn logic of programming, without the language. <br><br>Bricks & Bytes was developed at PCH Hackathon in a collaboration with seven other mechatronics student. Project includes 7 interchangeable modules that stimulates computer science concepts with real I/O feedback. <br><br>Each module called brick contains an Arduino micro-controller board to manage peripherals and UART communication, with a  designated \"transmitter\" module relaying information to an Android/iOS device via Bluetooth 2.0. (Communication between bricks are established using UART with the last brick transmitting any results to an Android/iOS application via Bluetooth.) <br><br>The purpose of the project was to make programming feel more intuitive and organic, allowing young users to familiarize themselves with the fundamental principles of the software development such as control flow and debugging."),
+      current: 0,
       images: [
         {
           id: 0,
@@ -90,16 +93,147 @@ angular.module('Portfolio').controller('WorkController', ['$sce', function ($sce
           isVideo: true,
           source: "img/bricksandbytes/7.jpg",
           vsource: $sce.trustAsResourceUrl("http://www.youtube.com/embed/RUrxql83HLA?controls=2"),
-        }
+        },
       ],
     },
     {
       title: "uClicker",
       content: $sce.trustAsHtml("uClicker is a portable hardware platform that allows students to answer iClicker questions from their phones. <br><br> uClicker was developed at Hack The North 2015 in collaboration with two other engineering students. It uses an Arduino micro-controller board, an RF Link transmitter and an RF Link receiver. <br><br>When the user selects an option (options can be selected using an Android app), signals are sent to the iClicker base station using the RF Link transmitter. The RF Link receiver then reads data from the base station and other iClickers which adds more features like finding  the most selected answer, mass changing/randomizing other student's answers, jamming signals during a question, etc. Using our open source platform, users are able to hack and customize their uClicker with desired functionalities. <br><br>The purpose of this project was to find an affordable alternative to iClicker and now it is possible with uClicker."),
+      current: 0,
+      images: [
+        {
+          id: 0,
+          isVideo: false,
+          source: "img/uclicker/0.jpg"
+        },
+        {
+          id: 1,
+          isVideo: false,
+          source: "img/uclicker/1.jpg"
+        },
+        {
+          id: 2,
+          isVideo: false,
+          source: "img/uclicker/2.jpg"
+        },
+        {
+          id: 3,
+          isVideo: false,
+          source: "img/uclicker/3.jpg"
+        },
+        {
+          id: 4,
+          isVideo: false,
+          source: "img/uclicker/4.jpg"
+        },
+        {
+          id: 5,
+          isVideo: false,
+          source: "img/uclicker/5.jpg"
+        },
+      ],
     },
-
-  ];
-}]);
+    {
+      title: "Myosic",
+      content: $sce.trustAsHtml("<em>Myosic won 'The Best Hack' award at Boilermake hackathon </em><br><br>Simple, elegant and easy to use. This app is a product of hardwork and a strong vision to improve hands free music experience. The visual hierarchy of user interface enriches the app's overall experience by creating a sense of depth. With Myosic, experience music like never before."),
+      current: 0,
+      images: [
+        {
+          id: 0,
+          isVideo: false,
+          source: "img/myosic/0.png"
+              },
+        {
+          id: 1,
+          isVideo: false,
+          source: "img/myosic/1.png"
+                },
+        {
+          id: 2,
+          isVideo: false,
+          source: "img/myosic/2.png"
+        },
+        {
+          id: 3,
+          isVideo: true,
+          source: "img/myosic/3.png",
+          vsource: $sce.trustAsResourceUrl("https://www.youtube.com/embed/5V_v1MZreSU?controls=2")
+        },
+      ],
+    },
+    {
+      title: "Wanderlust",
+      content: $sce.trustAsHtml("<em>Wanderlust received Windows Sponsorship award at YHack. </em><br><br>This multiplayer - motion control - first person shooting game was a inspired by interest in motion control and passion for technology. Utilizing Kinect's powerful skeletal tracking system, we were able to provide game controls purely using body motion. <br><br>Environment for game is created using  Unity engine and scripting for environment and players is done in C# using Unity Environment. Game servers were hosted on Windows Azure."),
+      current: 0,
+      images: [
+        {
+          id: 0,
+          isVideo: false,
+          source: "img/wanderlust/0.png"
+        },
+      ],
+    },
+    {
+      title: "Tron 2019",
+      content: $sce.trustAsHtml("<em>Around 300 sweaters with Tron 2019 design bought by Mechatronics Engineering class of 2019 at University of Waterloo. Asked multiple times by other tron classes to design one for thier year.</em><br><br> Tron 2019 was a design project undertaken during summer 2015 to create a brand for Mechatronics Engineeing class of 2019. This design reflects the core concepts of Mechatronics Engineering while keeping the mordern flat design in mind. Everything from selecting color schemes to finishing touches was done with excessive attention of detail.<br><br> Color scheme was this design was a challeges, as I wanted tron 2019 brand to go seamlessly with most popular sweater colors. After a long inspection, I was able to desing a perfect color scheme that worked with all the famous sweater colors. <br><br>Tron 2019 was a great success and is greatly appretiated by colleagues and friends to this date. Fellow trons are found wearing tron 2019 sweater/hoodie with pride. I am greatful to be a part of such a amazing movement and happy to bring smiles to hundreds of faces."),
+      current: 0,
+      images: [
+        {
+          id: 0,
+          isVideo: false,
+          source: "img/tron2019/0.png"
+              },
+        {
+          id: 1,
+          isVideo: false,
+          source: "img/tron2019/1.png"
+                },
+        {
+          id: 2,
+          isVideo: false,
+          source: "img/tron2019/2.png",
+        },
+        {
+          id: 3,
+          isVideo: false,
+          source: "img/tron2019/3.png",
+        },
+        {
+          id: 4,
+          isVideo: false,
+          source: "img/tron2019/4.png",
+        },
+        {
+          id: 5,
+          isVideo: false,
+          source: "img/tron2019/5.png",
+        },
+      ],
+    },
+    {
+      title: "Desk",
+      content: $sce.trustAsHtml("Desk is a photography project conducted during moving houses. It does a excellent job of defining me by demonstration of my quotidian tools. These tools are a extended part of me and are of extreme importance."),
+      current: 0,
+      images: [
+        {
+          id: 0,
+          isVideo: false,
+          source: "img/desk/0.jpg"
+              },
+        {
+          id: 1,
+          isVideo: false,
+          source: "img/desk/1.jpg"
+                },
+        {
+          id: 2,
+          isVideo: false,
+          source: "img/desk/2.jpg",
+        },
+      ],
+          },
+          ];
+      }]);
 
 angular.module('Portfolio').controller('BioController', function () {
   this.message = 'Nothing';
