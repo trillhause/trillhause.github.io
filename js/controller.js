@@ -52,28 +52,45 @@ angular.module('Portfolio').controller('WorkController', ['$sce', function ($sce
       images: [
         {
           id: 0,
-          source: "img/bricksandbytes/1.jpg"
+          isVideo: false,
+          source: "img/bricksandbytes/0.jpg"
         },
         {
           id: 1,
-          source: "img/bricksandbytes/2.jpg"
+          isVideo: false,
+          source: "img/bricksandbytes/1.jpg"
         },
         {
           id: 2,
-          source: "img/bricksandbytes/3.jpg"
+          isVideo: false,
+          source: "img/bricksandbytes/2.jpg"
         },
         {
           id: 3,
-          source: "img/bricksandbytes/4.jpg"
+          isVideo: false,
+          source: "img/bricksandbytes/3.jpg"
         },
         {
           id: 4,
-          source: "img/bricksandbytes/5.jpg"
+          isVideo: false,
+          source: "img/bricksandbytes/4.jpg"
         },
         {
           id: 5,
+          isVideo: false,
+          source: "img/bricksandbytes/5.jpg"
+        },
+        {
+          id: 6,
+          isVideo: false,
           source: "img/bricksandbytes/6.jpg"
         },
+        {
+          id: 7,
+          isVideo: true,
+          source: "img/bricksandbytes/7.jpg",
+          vsource: $sce.trustAsResourceUrl("http://www.youtube.com/embed/RUrxql83HLA?controls=2"),
+        }
       ],
     },
     {

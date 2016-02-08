@@ -264,12 +264,11 @@ h1 {
 }
 
 .work-preview-image {
-  background-color: green;
   margin-bottom: 2%;
   border: 1px solid;
   display: flex;
   justify-content: center;
-  align-items: center
+  align-items: center;
 }
 
 .work-image-container {
@@ -290,6 +289,22 @@ h1 {
   position: absolute;
   width: 100%;
   height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+
+.work-img-tag {
+  max-width: 200px;
+  max-height: 200px;
+  width: auto;
+  height: auto;
+}
+
+iframe {
+  width: 100%;
+  height: 17em;
 }
 
 

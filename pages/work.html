@@ -6,14 +6,15 @@
       <div class="col-md-7 work-info ">
         <p ng-bind-html="project.content "></p>
       </div>
-      <div class="work-images col-md-5 ">
-        <div class="work-preview-image ">
-          <img ng-src=" {{project.images[work.image].source}} " style="width:100% ">
+      <div class="work-images col-md-5">
+        <div class="work-preview-image">
+          <img ng-hide="project.images[work.image].isVideo" ng-src=" {{project.images[work.image].source}} " style="width:100% ">
+          <iframe ng-show="project.images[work.image].isVideo" ng-src="{{project.images[work.image].vsource}}"></iframe>
         </div>
-        <div class="work-image-gallery " ng-repeat="image in project.images ">
-          <div class="col-xs-4 work-image-container " style="padding:0px; width:21% ">
-            <div class="work-image-content ">
-              <a ng-click="work.setImage(image.id)"><img ng-src="{{image.source}} " style="width:100% " /></a>
+        <div class="work-image-gallery" ng-repeat="image in project.images ">
+          <div class="col-xs-4 work-image-container" style="padding:0px ; width:21% ">
+            <div class="work-image-content">
+              <a ng-click="work.setImage(image.id) "><img class="work-img-tag " ng-src="{{image.source}} " /></a>
             </div>
           </div>
         </div>
@@ -21,3 +22,8 @@
     </div>
   </div>
 </div>
+
+
+
+
+<!--<iframe width="200 " height="100 " src="{{project.images[work.image].vsource}} ">-->
