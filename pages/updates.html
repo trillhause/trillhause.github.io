@@ -1,4 +1,38 @@
-<div class="jumbotron text-center">
-  <h1>Updates</h1>
-  <p>{{updates.message}}</p>
+<div class="outer updates-outer">
+  <div ng-hide="updates.set" class="bio-inner updates-inner">
+    <h2>Updates</h2>
+    <br>
+    <p>
+      Welcome to my blog.
+      <br>
+      <br>This is the place where I share my ideas and experiences with you. The perfect description for this page is - 'a log of my thoughts'. Each article is based on expereinces I have had that changed my perception on life. The reason I share this very private information (my thoughts) is so that others can learn what I have, easily and quickly.
+      <br>
+      <br>If you feel to discuss my writing in detail, drop me a line on my contact page. I will get back to you as soon as I can.
+      <br>
+      <br><em>To read a article, select the desired topic</em>
+    </p>
+    <div ng-repeat="article in updates.articles ">
+
+      <a href ng-click="updates.setArticle(article.id) ">
+        <h3>
+        {{article.title}}
+      </h3>
+      </a>
+    </div>
+  </div>
+  <div ng-show=" article.isActive " ng-repeat="article in updates.articles ">
+    <h2>
+        {{article.title}}
+      </h2>
+
+    <br>
+    <div class="row ">
+      <div class="col-sm-9 updates-info " style="margin-bottom:10px ">
+        <p ng-bind-html="article.content "></p>
+        <a href ng-click="updates.unsetArticle(article.id) ">
+          <p><strong>Back</strong></p>
+        </a>
+      </div>
+    </div>
+  </div>
 </div>

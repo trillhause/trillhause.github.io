@@ -1,5 +1,5 @@
-<div class="bio-outer work-outer">
-  <div class=" bio-inner work-inner" ng-repeat="project in work.projects" style="margin-bottom:100px">
+<div class="outer work-outer">
+  <div class=" work-inner" ng-repeat="project in work.projects" style="margin-bottom:100px">
     <h2 style=" font-size:2em ">{{project.title}}</h2>
     <br>
     <div class="row ">
@@ -14,7 +14,7 @@
         <div ng-hide="work.isNotGallery(project.images.length)" class="work-image-gallery" ng-repeat="image in project.images ">
           <div class="col-xs-4 work-image-container" style="padding:0px ; width:21% ">
             <div class="work-image-content">
-              <a ng-click="work.setImage(project ,image.id)"><img class="work-img-tag " ng-src="{{image.source}} " /></a>
+              <a href ng-click="work.setImage(project ,image.id)"><img class="work-img-tag " ng-src="{{image.source}} " /></a>
             </div>
           </div>
         </div>

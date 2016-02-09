@@ -108,6 +108,37 @@ textarea {
   text-decoration: underline;
 }
 
+.outer {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.outer h2 {
+  font-family: 'Source Sans Pro';
+  font-weight: 600;
+  font-size: 1.5em;
+  letter-spacing: 1px;
+  color: #333333
+}
+
+.outer p {
+  font-family: 'Source Sans Pro';
+  font-size: 1.0em;
+  font-weight: 300;
+  letter-spacing: 1px;
+  word-spacing: 3px;
+  color: #333333;
+  padding-bottom: 15px;
+}
+
+h1 {
+  font-family: avenir;
+  font-weight: 900;
+  font-size: 2em;
+  letter-spacing: 10px;
+  color: #333333
+}
+
 
 /*index.html*/
 
@@ -212,37 +243,6 @@ typedjs {
 
 /*bio.html*/
 
-.bio-outer {
-  padding-left: 5%;
-  padding-right: 5%;
-}
-
-.bio-outer h2 {
-  font-family: 'Source Sans Pro';
-  font-weight: 600;
-  font-size: 1.5em;
-  letter-spacing: 1px;
-  color: #333333
-}
-
-.bio-outer p {
-  font-family: 'Source Sans Pro';
-  font-size: 1.0em;
-  font-weight: 300;
-  letter-spacing: 1px;
-  word-spacing: 3px;
-  color: #333333;
-  padding-bottom: 15px;
-}
-
-h1 {
-  font-family: avenir;
-  font-weight: 900;
-  font-size: 2em;
-  letter-spacing: 10px;
-  color: #333333
-}
-
 
 /*contact.html*/
 
@@ -252,6 +252,30 @@ h1 {
 
 .ng-valid.ng-dirty {
   border-color: darkseagreen;
+}
+
+
+/*updates.html*/
+
+.updates-outer h2 {
+  font-size: 2em;
+}
+
+.updates-outer h3 {
+  font-family: 'Source Sans Pro';
+  font-weight: 400;
+  font-size: 1.2em;
+  letter-spacing: 1px;
+  color: #333333;
+  margin-top: 0px
+}
+
+.updates-inner a,
+.updates-inner a:hover,
+.updates-inner a:visited,
+.updates-inner a:active {
+  text-decoration: none;
+  color: #333333
 }
 
 
@@ -292,7 +316,7 @@ h1 {
   overflow: hidden;
   display: flex;
   justify-content: center;
-  align-items: center
+  align-items: center;
 }
 
 .work-img-tag {

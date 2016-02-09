@@ -39,8 +39,8 @@ angular.module('Portfolio').controller('MainController', function () {
   }
 });
 
-angular.module('Portfolio').controller('WorkController', ['$sce', function ($sce) {
-  this.message = 'Project Showcase';
+angular.module('Portfolio').controller('WorkController', ['$sce', '$http', function ($sce, $http) {
+  var work = this;
   this.setImage = function (project, value) {
     project.current = value;
   }
@@ -229,19 +229,47 @@ angular.module('Portfolio').controller('WorkController', ['$sce', function ($sce
           id: 2,
           isVideo: false,
           source: "img/desk/2.jpg",
-        },
-      ],
-          },
-          ];
-      }]);
+        }
+      ]
+    }
+  ]
+}]);
 
-angular.module('Portfolio').controller('BioController', function () {
-  this.message = 'Nothing';
-});
+angular.module('Portfolio').controller('BioController', function () {});
 
-angular.module('Portfolio').controller('UpdatesController', function () {
-  this.message = 'Find out more about my life';
-});
+angular.module('Portfolio').controller('UpdatesController', ['$sce', function ($sce) {
+  this.current = null;
+  this.setArticle = function (value) {
+    this.articles[value].isActive = !this.articles[value].isActive;
+    this.set = true;
+  }
+  this.unsetArticle = function (value) {
+    this.articles[value].isActive = !this.articles[value].isActive;
+    this.set = false;
+
+  }
+
+  this.articles = [
+    {
+      id: 0,
+      isActive: false,
+      title: "Hackers and Painters",
+      content: $sce.trustAsHtml("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor ullamcorper pulvinar. Vivamus diam erat, semper in malesuada ut, dictum a mi. Integer at felis dictum, sollicitudin libero eget, posuere erat. Suspendisse ullamcorper massa eu viverra porta. Suspendisse interdum quam dolor, eget fringilla justo pharetra sed. Aliquam in dictum lectus. Nulla consequat lacus at pretium auctor. Praesent maximus diam pharetra elit interdum imperdiet. Etiam rutrum venenatis lacus, at luctus diam commodo eget. Aliquam congue, lectus vitae malesuada scelerisque, sem nulla suscipit urna, a pretium quam arcu ac augue. Sed interdum consequat suscipit. Mauris eu orci a dolor viverra finibus. Mauris blandit nulla rutrum pretium ornare. Sed quis enim lectus.<br><br> Nullam eget pharetra orci. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras at libero id elit auctor volutpat. In sit amet purus at libero viverra pretium. Cras sollicitudin tempus porttitor. Aenean aliquam dolor at velit imperdiet auctor. Donec maximus pellentesque fermentum. Proin et dapibus neque. Quisque id orci quis dolor volutpat elementum."),
+    },
+    {
+      id: 1,
+      isActive: false,
+      title: "Life is Short",
+      content: $sce.trustAsHtml("ulla consequat lacus at pretium auctor. Praesent maximus diam pharetra elit interdum imperdiet. Etiam rutrum venenatis lacus, at luctus diam commodo eget. Aliquam congue, lectus vitae malesuada scelerisque, sem nulla suscipit urna, a pretium quam arcu ac augue. Sed interdum consequat suscipit. Mauris eu orci a dolor viverra finibus. Mauris blandit nulla rutrum pretium ornare. Sed quis enim lectus.<br><br> Nullam eget pharetra orci. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras at libero id elit auctor volutpat. In sit amet purus at libero viverra pretium. Cras sollicitudin tempus porttitor. Aenean aliquam dolor at velit imperdiet auctor. Donec maximus pellentesque fermentum. Proin et dapibus neque. Quisque id orci quis dolor volutpat elementum."),
+    },
+    {
+      id: 2,
+      isActive: false,
+      title: "Becoming an Adult",
+      content: $sce.trustAsHtml("ngilla justo pharetra sed. Aliquam in dictum lectus. Nulla consequat lacus at pretium auctor. Praesent maximus diam pharetra elit interdum imperdiet. Etiam rutrum venenatis lacus, at luctus diam commodo eget. Aliquam congue, lectus vitae malesuada scelerisque, sem nulla suscipit urna, a pretium quam arcu ac augue. Sed interdum consequat suscipit. Mauris eu orci a dolor viverra finibus. Mauris blandit nulla rutrum pretium ornare. Sed quis enim lectus.<br><br> Nullam eget pharetra orci. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras at libero id elit auctor volutpat. In sit amet<br><br> pulla consequat lacus at pretium auctor. Praesent maximus diam pharetra elit interdum imperdiet. Etiam rutrum venenatis lacus, at luctus diam commodo eget. Aliquam congue, lectus vitae malesuada scelerisque, sem nulla suscipit urna, a pretium quam arcu ac augue. Sed interdum consequat suscipit. Mauris eu orci a dolor viverra finibus. Mauris blandit nulla rutrum pretium ornare. Sed quis enim lectus.<br><br> Nullam eget pharetra orci. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras at libero id elit auctor volutpat. In sit amet purus at libero viverra pretium. Cras sollicitudin tempus porttitor. Aenean aliquam dolor at velit imperdiet auctor. Donec maximus pellentesque fermentum. Proin et dapibus neque. Quisque id orci quis dolor volutpat elementum."),
+    },
+  ];
+}]);
 
 angular.module('Portfolio').controller('ContactController', ['$http', function ($http) {
   var contact = this;
