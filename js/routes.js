@@ -32,7 +32,11 @@ angular.module('Portfolio').config(function ($routeProvider) {
       controller: 'ContactController',
       controllerAs: 'contact'
     })
-    // route for the contact page
+    .when('/thankyou', {
+      templateUrl: 'pages/thankyou.html',
+      controller: 'ThankController',
+      controllerAs: 'thank'
+    })
     .otherwise({
       templateUrl: 'pages/404.html'
     });

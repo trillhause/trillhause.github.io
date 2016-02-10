@@ -200,7 +200,9 @@ h1 {
 
 /*home.html*/
 
-.home-outer {
+.home-outer,
+.thankyou-outer,
+.error-outer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -208,7 +210,9 @@ h1 {
   background-color: white;
 }
 
-.home-inner {
+.home-inner,
+.thankyou-inner,
+.error-outer {
   text-align: center
 }
 
@@ -252,6 +256,26 @@ typedjs {
 
 .ng-valid.ng-dirty {
   border-color: darkseagreen;
+}
+
+
+/*thankyou.html and error.html*/
+
+.error-outer h1 {
+  font-family: avenir;
+  font-weight: 900;
+  font-size: 2em;
+  letter-spacing: 10px;
+  color: #333333
+}
+
+.thankyou-outer p,
+.error-outer p {
+  font-family: avenir;
+  font-weight: 300;
+  font-size: 1.2em;
+  letter-spacing: 2px;
+  color: #333333
 }
 
 
@@ -394,6 +418,10 @@ iframe {
   .bio-outer h2 {
     text-align: center
   }
+  .home-outer,
+  .thankyou-outer {
+    border-top: 1px solid;
+  }
 }
 
 @media (min-width: 768px) {
@@ -428,7 +456,8 @@ iframe {
     padding-bottom: 1.2em;
     padding-top: 1.2em;
   }
-  .home-outer {
+  .home-outer,
+  .thankyou-outer {
     border-left: 1px solid;
   }
 }

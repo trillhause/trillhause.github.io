@@ -28,6 +28,33 @@ angular.module('Portfolio').controller('HomeController', function () {
   };
 });
 
+angular.module('Portfolio').controller('ThankController', function () {
+  this.texttyping = ["Thankyou^3000", "Je vous remercie^3000", "Gracias^3000"]
+}).directive('typed', function () {
+  return {
+    restrict: 'E',
+    scope: {
+      strings: '='
+    },
+    template: '<span id="typed-output"></span>',
+    link: function ($scope, $element, $attrs) {
+      var options = {
+        strings: $scope.strings,
+        typeSpeed: 40,
+        loop: true,
+        contentType: "html",
+        showCursor: true,
+        loopCount: false,
+        cursorChar: "_"
+      };
+
+      $(function () {
+        $("#typed-output").typed(options);
+      });
+    }
+  };
+});
+
 angular.module('Portfolio').controller('MainController', function () {
   this.message = "Main";
   this.tab = 0;
