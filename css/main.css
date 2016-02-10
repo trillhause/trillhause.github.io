@@ -261,6 +261,14 @@ typedjs {
 
 /*thankyou.html and error.html*/
 
+typed {
+  font-family: avenir;
+  font-weight: 900;
+  font-size: 2em;
+  letter-spacing: 10px;
+  color: #333333;
+}
+
 .error-outer h1 {
   font-family: avenir;
   font-weight: 900;
@@ -275,7 +283,8 @@ typedjs {
   font-weight: 300;
   font-size: 1.2em;
   letter-spacing: 2px;
-  color: #333333
+  color: #333333;
+  margin-top: 0.3em;
 }
 
 
@@ -419,7 +428,8 @@ iframe {
     text-align: center
   }
   .home-outer,
-  .thankyou-outer {
+  .thankyou-outer,
+  .error-outer {
     border-top: 1px solid;
   }
 }

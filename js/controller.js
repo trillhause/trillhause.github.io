@@ -29,7 +29,7 @@ angular.module('Portfolio').controller('HomeController', function () {
 });
 
 angular.module('Portfolio').controller('ThankController', function () {
-  this.texttyping = ["Thankyou^3000", "Je vous remercie^3000", "Gracias^3000"]
+  this.texttyping = ["THANK YOU^3000", "JE VOUS REMERCIE^3000", "GRACIAS^3000"]
 }).directive('typed', function () {
   return {
     restrict: 'E',
