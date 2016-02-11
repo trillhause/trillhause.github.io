@@ -101,34 +101,6 @@ textarea {
 
 
 /* ==========================================================================
-   Google Maps custom styles
- ========================================================================== */
-
-#map {
-  width: 100%;
-  height: 400px;
-}
-
-a[href^="http://maps.google.com/maps"] {
-  display: none !important
-}
-
-a[href^="https://maps.google.com/maps"] {
-  display: none !important
-}
-
-.gmnoprint a,
-.gmnoprint span,
-.gm-style-cc {
-  display: none;
-}
-
-.gmnoprint div {
-  background: none !important;
-}
-
-
-/* ==========================================================================
    Author's custom styles
  ========================================================================== */
 

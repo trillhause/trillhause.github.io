@@ -1,4 +1,5 @@
 // create the module and name it scotchApp
+
 var scotchApp = angular.module('Portfolio', ['ngRoute']);
 
 $(document).ready(function () {
@@ -13,5 +14,4 @@ $(document).ready(function () {
     function (e) {
       $("#main-content").removeClass("make-fullscreen")
     });
-
 });

@@ -5,54 +5,56 @@
     <br>
     <br>
     <div class="row">
-      <div class="col-sm-7">
-        <form class="contact-form" action="https://submit.jotform.ca/submit/60398379813266/" method="post" name="form_60398379813266" id="60398379813266" accept-charset="utf-8" novalidate>
-          <input type="hidden" name="formID" value="60398379813266" />
-          <div class="form-all">
-            <ul class="form-section page-section">
-              <li class="form-line" data-type="control_textbox" id="id_1">
-                <div id="cid_1" class="form-input jf-required">
-                  <input type="text" class=" form-textbox" data-type="input-textbox" ng-model='contact.visitor.name' id="input_1" name="q1_name" placeholder="Your Name" value=" " size="35" required/>
-                </div>
-              </li>
-              <li class="form-line " data-type="control_email " id="id_3 ">
-                <div id="cid_3 " class="form-input jf-required ">
-                  <input type="email " class=" form-textbox validate[Email] " ng-model='contact.visitor.email' size="35" id="input_3 " name="q3_email " placeholder="your@email.com" value=" " required/>
-                </div>
-              </li>
-              <li class="form-line " data-type="control_textarea " id="id_4 ">
-                <div id="cid_4 " class="form-input jf-required ">
-                  <textarea id="input_4 " class="form-textarea " name="q4_message " ng-model='contact.visitor.message' rows="6" placeholder="Dear Millin..." required></textarea>
-                </div>
-              </li>
-              <li class="form-line " data-type="control_button " id="id_2 ">
-                <div id="cid_2 " class="form-input-wide ">
-                  <div class="form-buttons-wrapper ">
-                    <p ng-hide="form_60398379813266.$valid "><em><type strings=contact.texttyping></type></em></p>
-                    <button ng-show="form_60398379813266.$valid " id="input_2 " type="submit " class="form-submit-button ">
-                      Submit
-                    </button>
-                  </div>
-                </div>
-              </li>
-              <li style="display:none ">
-                Should be Empty:
-                <input type="text " name="website " value=" " />
-              </li>
-            </ul>
-          </div>
-          <input type="hidden" id="simple_spc " name="simple_spc " value="60398379813266 " />
-          <script type="text/javascript ">
-            document.getElementById("si " + "mple " + "_spc ").value = "60398379813266-60398379813266 ";
-          </script>
-        </form>
-      </div>
       <div class="col-sm-5">
-        <div id="map" ng-init="contact.initMap()"></div>
-        <script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>
+        <p>I am living in waterloo for my winter 2016 co-op.
+          <br>
+          <br> If you want to set up a meeting for any projects or cool ideas. Drop me a line and I will get in touch as soon as I can. </p>
+      </div>
+      <div class="col-sm-7" style="padding-left:10%; ">
+        <div style="  border:1px solid ;padding:7%">
+          <form class="contact-form" action="https://submit.jotform.ca/submit/60398379813266/" method="post" name="form_60398379813266" id="60398379813266" accept-charset="utf-8" novalidate>
+            <input type="hidden" name="formID" value="60398379813266" />
+            <div class="form-all">
+              <ul class="form-section page-section">
+                <li class="form-line" data-type="control_textbox" id="id_1">
+                  <div id="cid_1" class="form-input jf-required">
+                    <input type="text" class=" form-textbox" data-type="input-textbox" ng-model='contact.visitor.name' id="input_1" name="q1_name" placeholder="Your Name" value=" " size="35" required/>
+                  </div>
+                </li>
+                <li class="form-line " data-type="control_email " id="id_3 ">
+                  <div id="cid_3 " class="form-input jf-required ">
+                    <input type="email " class=" form-textbox validate[Email] " ng-model='contact.visitor.email' size="35" id="input_3 " name="q3_email " placeholder="your@email.com" value=" " required/>
+                  </div>
+                </li>
+                <li class="form-line " data-type="control_textarea " id="id_4 ">
+                  <div id="cid_4 " class="form-input jf-required ">
+                    <textarea id="input_4 " class="form-textarea " name="q4_message " ng-model='contact.visitor.message' rows="6" placeholder="Dear Millin..." required></textarea>
+                  </div>
+                </li>
+                <li class="form-line " data-type="control_button " id="id_2 ">
+                  <div id="cid_2 " class="form-input-wide ">
+                    <div class="form-buttons-wrapper ">
+                      <p ng-hide="form_60398379813266.$valid "><em><type strings=contact.texttyping></type></em></p>
+                      <button ng-show="form_60398379813266.$valid " id="input_2 " type="submit " class="form-submit-button ">
+                        Submit
+                      </button>
+                    </div>
+                  </div>
+                </li>
+                <li style="display:none ">
+                  Should be Empty:
+                  <input type="text " name="website " value=" " />
+                </li>
+              </ul>
+            </div>
+            <input type="hidden" id="simple_spc " name="simple_spc " value="60398379813266 " />
+            <script type="text/javascript ">
+              document.getElementById("si " + "mple " + "_spc ").value = "60398379813266-60398379813266 ";
+            </script>
+          </form>
+        </div>
       </div>
     </div>
-
   </div>
 </div>
 
@@ -178,40 +180,40 @@
       <label for="name " class="col-sm-2 control-label ">Name</label>
       <div class="col-sm-10 ">
         <input type="text " class="form-control " id="name " name="name " placeholder="First & Last Name " value="<?php echo htmlspecialchars($_POST[ 'name']); ?>">
-              <?php echo "<p class='text-danger'>$errName</p>";?>
-            </div>
+        <?php echo "<p class='text-danger'>$errName</p>";?>
       </div>
-      <div class="form-group">
-        <label for="email" class="col-sm-2 control-label">Email</label>
-        <div class="col-sm-10">
-          <input type="email" class="form-control" id="email" name="email" placeholder="example@domain.com" value="<?php echo htmlspecialchars($_POST['email']); ?>">
-          <?php echo "<p class='text-danger'>$errEmail</p>";?>
-        </div>
+    </div>
+    <div class="form-group">
+      <label for="email" class="col-sm-2 control-label">Email</label>
+      <div class="col-sm-10">
+        <input type="email" class="form-control" id="email" name="email" placeholder="example@domain.com" value="<?php echo htmlspecialchars($_POST['email']); ?>">
+        <?php echo "<p class='text-danger'>$errEmail</p>";?>
       </div>
-      <div class="form-group">
-        <label for="message" class="col-sm-2 control-label">Message</label>
-        <div class="col-sm-10">
-          <textarea class="form-control" rows="4" name="message">
-            <?php echo htmlspecialchars($_POST['message']);?>
-          </textarea>
-          <?php echo "<p class='text-danger'>$errMessage</p>";?>
-        </div>
+    </div>
+    <div class="form-group">
+      <label for="message" class="col-sm-2 control-label">Message</label>
+      <div class="col-sm-10">
+        <textarea class="form-control" rows="4" name="message">
+          <?php echo htmlspecialchars($_POST['message']);?>
+        </textarea>
+        <?php echo "<p class='text-danger'>$errMessage</p>";?>
       </div>
-      <div class="form-group">
-        <label for="human" class="col-sm-2 control-label">2 + 3 = ?</label>
-        <div class="col-sm-10">
-          <input type="text" class="form-control" id="human" name="human" placeholder="Your Answer">
-          <?php echo "<p class='text-danger'>$errHuman</p>";?>
-        </div>
+    </div>
+    <div class="form-group">
+      <label for="human" class="col-sm-2 control-label">2 + 3 = ?</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="human" name="human" placeholder="Your Answer">
+        <?php echo "<p class='text-danger'>$errHuman</p>";?>
       </div>
-      <div class="form-group">
-        <div class="col-sm-10 col-sm-offset-2">
-          <input id="submit" name="submit" type="submit" value="Send" class="btn btn-primary">
-        </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-10 col-sm-offset-2">
+        <input id="submit" name="submit" type="submit" value="Send" class="btn btn-primary">
       </div>
-      <div class="form-group">
-        <div class="col-sm-10 col-sm-offset-2">
-          <?php echo $result; ?>
-        </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-10 col-sm-offset-2">
+        <?php echo $result; ?>
       </div>
+    </div>
     </form>-->

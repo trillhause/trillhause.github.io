@@ -2,7 +2,6 @@
 angular.module('Portfolio').controller('HomeController', function () {
   // create a message to display in our view
   this.message = 'Everyone come and see how good I look!';
-
   this.texttyping = ["logically minded and creative at heart^5000", "design oriented developer^5000", "street smart engineer^5000"]
 }).directive('typedjs', function () {
   return {
@@ -14,7 +13,7 @@ angular.module('Portfolio').controller('HomeController', function () {
     link: function ($scope, $element, $attrs) {
       var options = {
         strings: $scope.strings,
-        typeSpeed: 40,
+        typeSpeed: 25,
         loop: true,
         contentType: "html",
         showCursor: true,
@@ -41,7 +40,7 @@ angular.module('Portfolio').controller('ThankController', function () {
     link: function ($scope, $element, $attrs) {
       var options = {
         strings: $scope.strings,
-        typeSpeed: 40,
+        typeSpeed: 20,
         loop: true,
         contentType: "html",
         showCursor: true,
@@ -299,143 +298,6 @@ angular.module('Portfolio').controller('UpdatesController', ['$sce', function ($
   ];
 }]);
 
-
-ContactController.$inject = ['$scope', '$routeParams'];
-
-function ContactController($scope, $routeParams) {
-
-  scope.initMap = function () {
-    var mapDiv = document.getElementById('map');
-    var map = new google.maps.Map(mapDiv, {
-      center: {
-        lat: 43.4667,
-        lng: -80.5167
-      },
-      zoom: 14,
-      disableDefaultUI: true
-    });
-    map.set('styles', [{
-      "featureType": "water",
-      "elementType": "geometry",
-      "stylers": [{
-        "color": "#e9e9e9"
-        }, {
-        "lightness": 17
-        }]
-      }, {
-      "featureType": "landscape",
-      "elementType": "geometry",
-      "stylers": [{
-        "color": "#f5f5f5"
-        }, {
-        "lightness": 20
-        }]
-      }, {
-      "featureType": "road.highway",
-      "elementType": "geometry.fill",
-      "stylers": [{
-        "color": "#ffffff"
-        }, {
-        "lightness": 17
-        }]
-      }, {
-      "featureType": "road.highway",
-      "elementType": "geometry.stroke",
-      "stylers": [{
-        "color": "#ffffff"
-        }, {
-        "lightness": 29
-        }, {
-        "weight": 0.2
-        }]
-      }, {
-      "featureType": "road.arterial",
-      "elementType": "geometry",
-      "stylers": [{
-        "color": "#ffffff"
-        }, {
-        "lightness": 18
-        }]
-      }, {
-      "featureType": "road.local",
-      "elementType": "geometry",
-      "stylers": [{
-        "color": "#ffffff"
-        }, {
-        "lightness": 16
-        }]
-      }, {
-      "featureType": "poi",
-      "elementType": "geometry",
-      "stylers": [{
-        "color": "#f5f5f5"
-        }, {
-        "lightness": 21
-        }]
-      }, {
-      "featureType": "poi.park",
-      "elementType": "geometry",
-      "stylers": [{
-        "color": "#dedede"
-        }, {
-        "lightness": 21
-        }]
-      }, {
-      "elementType": "labels.text.stroke",
-      "stylers": [{
-        "visibility": "on"
-        }, {
-        "color": "#ffffff"
-        }, {
-        "lightness": 16
-        }]
-      }, {
-      "elementType": "labels.text.fill",
-      "stylers": [{
-        "saturation": 36
-        }, {
-        "color": "#333333"
-        }, {
-        "lightness": 40
-        }]
-      }, {
-      "elementType": "labels.icon",
-      "stylers": [{
-        "visibility": "off"
-        }]
-      }, {
-      "featureType": "transit",
-      "elementType": "geometry",
-      "stylers": [{
-        "color": "#f2f2f2"
-        }, {
-        "lightness": 19
-        }]
-      }, {
-      "featureType": "administrative",
-      "elementType": "geometry.fill",
-      "stylers": [{
-        "color": "#fefefe"
-        }, {
-        "lightness": 20
-        }]
-      }, {
-      "featureType": "administrative",
-      "elementType": "geometry.stroke",
-      "stylers": [{
-        "color": "#fefefe"
-        }, {
-        "lightness": 17
-        }, {
-        "weight": 1.2
-        }]
-      }]);
-  };
-
-  $scope.locationName = $routeParams.locationName;
-}
-
-
 angular.module('Portfolio').controller('ContactController', ['$http', function ($http) {
   this.texttyping = ["To submit the form, please fill all the fields correctly"]
     }]).directive('type', function () {
@@ -448,7 +310,7 @@ angular.module('Portfolio').controller('ContactController', ['$http', function (
     link: function ($scope, $element, $attrs) {
       var options = {
         strings: $scope.strings,
-        typeSpeed: 40,
+        typeSpeed: 5,
         loop: false,
         contentType: "html",
         showCursor: true,
@@ -461,9 +323,3 @@ angular.module('Portfolio').controller('ContactController', ['$http', function (
     }
   };
 });
-
-
-
-
-
-//
