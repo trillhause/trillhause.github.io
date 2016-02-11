@@ -207,6 +207,10 @@ h1 {
 
 /*home.html*/
 
+.inner {
+  margin-bottom: 100px
+}
+
 .home-outer,
 .thankyou-outer,
 .error-outer {
@@ -306,6 +310,17 @@ typedjs {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0px 0px 10px 0.1px rgba(0, 0, 0, 0.05);
   transition: 0.5s;
   transition-timing-function: ease;
+}
+
+.contact-form-container {
+  border: 1px solid;
+  padding: 7%
+}
+
+.form-submit-button {
+  border: none;
+  background: none;
+  margin-top: 1%
 }
 
 
@@ -511,6 +526,9 @@ iframe {
   .home-outer,
   .thankyou-outer {
     border-left: 1px solid;
+  }
+  .contact-outer .form-container {
+    padding-left: 7%
   }
 }
 

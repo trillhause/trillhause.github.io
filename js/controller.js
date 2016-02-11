@@ -29,7 +29,7 @@ angular.module('Portfolio').controller('HomeController', function () {
 });
 
 angular.module('Portfolio').controller('ThankController', function () {
-  this.texttyping = ["THANK YOU^3000", "JE VOUS REMERCIE^3000", "GRACIAS^3000"]
+  this.texttyping = ["THANK YOU^1500", "JE VOUS REMERCIE^1500", "GRACIAS^3000"]
 }).directive('typed', function () {
   return {
     restrict: 'E',
@@ -40,7 +40,7 @@ angular.module('Portfolio').controller('ThankController', function () {
     link: function ($scope, $element, $attrs) {
       var options = {
         strings: $scope.strings,
-        typeSpeed: 20,
+        typeSpeed: 25,
         loop: true,
         contentType: "html",
         showCursor: true,
@@ -249,7 +249,7 @@ angular.module('Portfolio').controller('WorkController', ['$sce', '$http', funct
           id: 0,
           isVideo: false,
           tSource: "img/desk/0s.jpg",
-          source: "img/desk/0.jpg"
+          source: "img/desk/0test.jpg"
               },
         {
           id: 1,
