@@ -14,7 +14,7 @@
         <div ng-hide="work.isNotGallery(project.images.length)" class="work-image-gallery" ng-repeat="image in project.images ">
           <div class="col-xs-4 work-image-container" style="padding:0px ; width:21% ">
             <div class="work-image-content">
-              <a href ng-click="work.setImage(project ,image.id)"><img class="work-img-tag " ng-src="{{image.source}} " /></a>
+              <a href ng-click="work.setImage(project ,image.id)"><img class="work-img-tag" ng-src="{{image.tSource}} " /></a>
             </div>
           </div>
         </div>
@@ -22,8 +22,3 @@
     </div>
   </div>
 </div>
-
-
-
-
-<!--<iframe width="200 " height="100 " src="{{project.images[work.image].vsource}} ">-->

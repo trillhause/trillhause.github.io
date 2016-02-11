@@ -83,42 +83,49 @@ angular.module('Portfolio').controller('WorkController', ['$sce', '$http', funct
         {
           id: 0,
           isVideo: false,
+          tSource: "img/bricksandbytes/0s.jpg",
           source: "img/bricksandbytes/0.jpg"
         },
         {
           id: 1,
           isVideo: false,
+          tSource: "img/bricksandbytes/1s.jpg",
           source: "img/bricksandbytes/1.jpg"
         },
         {
           id: 2,
           isVideo: false,
+          tSource: "img/bricksandbytes/2s.jpg",
           source: "img/bricksandbytes/2.jpg"
         },
         {
           id: 3,
           isVideo: false,
+          tSource: "img/bricksandbytes/3s.jpg",
           source: "img/bricksandbytes/3.jpg"
         },
         {
           id: 4,
           isVideo: false,
+          tSource: "img/bricksandbytes/4s.jpg",
           source: "img/bricksandbytes/4.jpg"
         },
         {
           id: 5,
           isVideo: false,
+          tSource: "img/bricksandbytes/5s.jpg",
           source: "img/bricksandbytes/5.jpg"
         },
         {
           id: 6,
           isVideo: false,
+          tSource: "img/bricksandbytes/6s.jpg",
           source: "img/bricksandbytes/6.jpg"
         },
         {
           id: 7,
           isVideo: true,
-          source: "img/bricksandbytes/7.jpg",
+          tSource: "img/bricksandbytes/7s.jpg",
           vsource: $sce.trustAsResourceUrl("http://www.youtube.com/embed/RUrxql83HLA?controls=2"),
         },
       ],
@@ -131,31 +138,37 @@ angular.module('Portfolio').controller('WorkController', ['$sce', '$http', funct
         {
           id: 0,
           isVideo: false,
+          tSource: "img/uclicker/0s.jpg",
           source: "img/uclicker/0.jpg"
         },
         {
           id: 1,
           isVideo: false,
+          tSource: "img/uclicker/1s.jpg",
           source: "img/uclicker/1.jpg"
         },
         {
           id: 2,
           isVideo: false,
+          tSource: "img/uclicker/2s.jpg",
           source: "img/uclicker/2.jpg"
         },
         {
           id: 3,
           isVideo: false,
+          tSource: "img/uclicker/3s.jpg",
           source: "img/uclicker/3.jpg"
         },
         {
           id: 4,
           isVideo: false,
+          tSource: "img/uclicker/4s.jpg",
           source: "img/uclicker/4.jpg"
         },
         {
           id: 5,
           isVideo: false,
+          tSource: "img/uclicker/5s.jpg",
           source: "img/uclicker/5.jpg"
         },
       ],
@@ -169,23 +182,7 @@ angular.module('Portfolio').controller('WorkController', ['$sce', '$http', funct
           id: 0,
           isVideo: false,
           source: "img/myosic/0.png"
-              },
-        {
-          id: 1,
-          isVideo: false,
-          source: "img/myosic/1.png"
-                },
-        {
-          id: 2,
-          isVideo: false,
-          source: "img/myosic/2.png"
-        },
-        {
-          id: 3,
-          isVideo: true,
-          source: "img/myosic/3.png",
-          vsource: $sce.trustAsResourceUrl("https://www.youtube.com/embed/5V_v1MZreSU?controls=2")
-        },
+        }
       ],
     },
     {
@@ -196,7 +193,7 @@ angular.module('Portfolio').controller('WorkController', ['$sce', '$http', funct
         {
           id: 0,
           isVideo: false,
-          source: "img/wanderlust/0.png"
+          source: "img/wanderlust/0.jpg"
         },
       ],
     },
@@ -208,31 +205,37 @@ angular.module('Portfolio').controller('WorkController', ['$sce', '$http', funct
         {
           id: 0,
           isVideo: false,
+          tSource: "img/tron2019/0s.png",
           source: "img/tron2019/0.png"
               },
         {
           id: 1,
           isVideo: false,
+          tSource: "img/tron2019/1s.png",
           source: "img/tron2019/1.png"
                 },
         {
           id: 2,
           isVideo: false,
+          tSource: "img/tron2019/2s.png",
           source: "img/tron2019/2.png",
         },
         {
           id: 3,
           isVideo: false,
+          tSource: "img/tron2019/3s.png",
           source: "img/tron2019/3.png",
         },
         {
           id: 4,
           isVideo: false,
+          tSource: "img/tron2019/4s.png",
           source: "img/tron2019/4.png",
         },
         {
           id: 5,
           isVideo: false,
+          tSource: "img/tron2019/5s.png",
           source: "img/tron2019/5.png",
         },
       ],
@@ -245,16 +248,19 @@ angular.module('Portfolio').controller('WorkController', ['$sce', '$http', funct
         {
           id: 0,
           isVideo: false,
+          tSource: "img/desk/0s.jpg",
           source: "img/desk/0.jpg"
               },
         {
           id: 1,
           isVideo: false,
+          tSource: "img/desk/1s.jpg",
           source: "img/desk/1.jpg"
                 },
         {
           id: 2,
           isVideo: false,
+          tSource: "img/desk/2s.jpg",
           source: "img/desk/2.jpg",
         }
       ]
