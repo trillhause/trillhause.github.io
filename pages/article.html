@@ -1,0 +1,11 @@
+<div>
+  <h2>{{updates.articles[updates.current].title}}</h2>
+  <br> {{updates.current}}
+  <div class="row">
+    <div class="col-sm-9 updates-info " style="margin-bottom:10px ">
+      <p ng-bind-html="updates.articles[updates.current].content"></p>
+      <a href="#/updates" s>
+        <p><strong>Back</strong></p>
+      </a>
+    </div>
+  </div>

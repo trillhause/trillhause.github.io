@@ -270,7 +270,7 @@ angular.module('Portfolio').controller('WorkController', ['$sce', '$http', funct
 
 angular.module('Portfolio').controller('BioController', function () {});
 
-angular.module('Portfolio').controller('UpdatesController', ['$sce', function ($sce) {
+angular.module('Portfolio').controller('UpdatesController', ['$sce', '$location', '$anchorScroll', function ($sce, $location, $anchorScroll) {
   this.current = null;
   this.setArticle = function (value) {
     this.articles[value].isActive = !this.articles[value].isActive;
@@ -279,14 +279,13 @@ angular.module('Portfolio').controller('UpdatesController', ['$sce', function ($
   this.unsetArticle = function (value) {
     this.articles[value].isActive = !this.articles[value].isActive;
     this.set = false;
-
   }
 
   this.articles = [
     {
       id: 0,
       isActive: false,
-      title: "Hackers and Painters",
+      title: "Painter to Engineer",
       content: $sce.trustAsHtml("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor ullamcorper pulvinar. Vivamus diam erat, semper in malesuada ut, dictum a mi. Integer at felis dictum, sollicitudin libero eget, posuere erat. Suspendisse ullamcorper massa eu viverra porta. Suspendisse interdum quam dolor, eget fringilla justo pharetra sed. Aliquam in dictum lectus. Nulla consequat lacus at pretium auctor. Praesent maximus diam pharetra elit interdum imperdiet. Etiam rutrum venenatis lacus, at luctus diam commodo eget. Aliquam congue, lectus vitae malesuada scelerisque, sem nulla suscipit urna, a pretium quam arcu ac augue. Sed interdum consequat suscipit. Mauris eu orci a dolor viverra finibus. Mauris blandit nulla rutrum pretium ornare. Sed quis enim lectus.<br><br> Nullam eget pharetra orci. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras at libero id elit auctor volutpat. In sit amet purus at libero viverra pretium. Cras sollicitudin tempus porttitor. Aenean aliquam dolor at velit imperdiet auctor. Donec maximus pellentesque fermentum. Proin et dapibus neque. Quisque id orci quis dolor volutpat elementum."),
     },
     {
@@ -298,14 +297,14 @@ angular.module('Portfolio').controller('UpdatesController', ['$sce', function ($
     {
       id: 2,
       isActive: false,
-      title: "Becoming an Adult",
+      title: "Turning Twenty-One",
       content: $sce.trustAsHtml("ngilla justo pharetra sed. Aliquam in dictum lectus. Nulla consequat lacus at pretium auctor. Praesent maximus diam pharetra elit interdum imperdiet. Etiam rutrum venenatis lacus, at luctus diam commodo eget. Aliquam congue, lectus vitae malesuada scelerisque, sem nulla suscipit urna, a pretium quam arcu ac augue. Sed interdum consequat suscipit. Mauris eu orci a dolor viverra finibus. Mauris blandit nulla rutrum pretium ornare. Sed quis enim lectus.<br><br> Nullam eget pharetra orci. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras at libero id elit auctor volutpat. In sit amet<br><br> pulla consequat lacus at pretium auctor. Praesent maximus diam pharetra elit interdum imperdiet. Etiam rutrum venenatis lacus, at luctus diam commodo eget. Aliquam congue, lectus vitae malesuada scelerisque, sem nulla suscipit urna, a pretium quam arcu ac augue. Sed interdum consequat suscipit. Mauris eu orci a dolor viverra finibus. Mauris blandit nulla rutrum pretium ornare. Sed quis enim lectus.<br><br> Nullam eget pharetra orci. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras at libero id elit auctor volutpat. In sit amet purus at libero viverra pretium. Cras sollicitudin tempus porttitor. Aenean aliquam dolor at velit imperdiet auctor. Donec maximus pellentesque fermentum. Proin et dapibus neque. Quisque id orci quis dolor volutpat elementum."),
     },
   ];
 }]);
 
 angular.module('Portfolio').controller('ContactController', ['$http', function ($http) {
-  this.texttyping = ["To submit the form, please fill all the fields correctly"]
+  this.texttyping = ["To submit the form, please fill all fields correctly"]
     }]).directive('type', function () {
   return {
     restrict: 'E',

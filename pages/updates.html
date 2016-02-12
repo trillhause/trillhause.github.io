@@ -1,5 +1,6 @@
 <div class="outer updates-outer">
   <div ng-hide="updates.set" class="inner updates-inner">
+
     <h2>Updates</h2>
     <br>
     <p>
@@ -13,7 +14,7 @@
     </p>
     <div ng-repeat="article in updates.articles ">
 
-      <a href ng-click="updates.setArticle(article.id) ">
+      <a href ng-click="updates.setArticle(article.id)">
         <h3>
         {{article.title}}
       </h3>
@@ -21,10 +22,8 @@
     </div>
   </div>
   <div ng-show=" article.isActive " ng-repeat="article in updates.articles ">
-    <h2>
-        {{article.title}}
-      </h2>
 
+    <h2>{{article.title}}</h2>
     <br>
     <div class="row ">
       <div class="col-sm-9 updates-info " style="margin-bottom:10px ">
