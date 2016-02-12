@@ -1,14 +1,4 @@
-/*! HTML5 Boilerplate v5.3.0 | MIT License | https://html5boilerplate.com/ */
-
-
-/*
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
-
-
-/* ==========================================================================
+  /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
 
@@ -132,15 +122,13 @@ button:focus {
   font-family: 'Source Sans Pro';
   font-size: 1.0em;
   font-weight: 300;
-  letter-spacing: 1px;
-  word-spacing: 3px;
+  letter-spacing: 0.7px;
+  word-spacing: 5px;
   color: #333333;
   padding-bottom: 15px;
 }
 
 h1 {
-  font-family: avenir;
-  font-weight: 900;
   font-size: 2em;
   letter-spacing: 10px;
   color: #333333
@@ -211,6 +199,10 @@ h1 {
   margin-bottom: 100px
 }
 
+.bio-inner {
+  margin-bottom: 50px
+}
+
 .home-outer,
 .thankyou-outer,
 .error-outer {
@@ -228,7 +220,7 @@ h1 {
 }
 
 .home-outer h1 {
-  font-family: avenir;
+  font-family: 'Lato';
   font-weight: 900;
   font-size: 2em;
   letter-spacing: 10px;
@@ -236,7 +228,7 @@ h1 {
 }
 
 .home-outer p {
-  font-family: avenir;
+  font-family: 'Lato';
   font-weight: 300;
   font-size: 1.2em;
   letter-spacing: 2px;
@@ -244,7 +236,7 @@ h1 {
 }
 
 typedjs {
-  font-family: avenir;
+  font-family: 'Lato';
   font-weight: 300;
   font-size: 1.2em;
   letter-spacing: 3px;
@@ -276,7 +268,7 @@ typedjs {
 .contact-form input {
   height: 2em;
   width: 50%;
-  font-family: avenir;
+  font-family: 'Lato';
   font-weight: 300;
   font-size: 1.2em;
   letter-spacing: 2px;
@@ -295,7 +287,7 @@ typedjs {
 
 .contact-form textarea {
   width: 100%;
-  font-family: avenir;
+  font-family: 'Lato';
   font-weight: 300;
   font-size: 1.2em;
   letter-spacing: 2px;
@@ -327,7 +319,7 @@ typedjs {
 /*thankyou.html and error.html*/
 
 typed {
-  font-family: avenir;
+  font-family: 'Lato';
   font-weight: 900;
   font-size: 2em;
   letter-spacing: 10px;
@@ -335,7 +327,7 @@ typed {
 }
 
 .error-outer h1 {
-  font-family: avenir;
+  font-family: 'Lato';
   font-weight: 900;
   font-size: 2em;
   letter-spacing: 10px;
@@ -344,7 +336,7 @@ typed {
 
 .thankyou-outer p,
 .error-outer p {
-  font-family: avenir;
+  font-family: 'Lato';
   font-weight: 300;
   font-size: 1.2em;
   letter-spacing: 2px;
@@ -456,7 +448,8 @@ iframe {
 /* Resoponsive Vertical Navbar */
 
 .sidebar-nav .navbar li a {
-  font-family: Avenir;
+  font-family: 'Lato';
+  font-weight: 300;
   font-size: 1.1em;
   color: #222222;
   letter-spacing: 5px;
@@ -737,4 +730,4 @@ ul {
   h3 {
     page-break-after: avoid;
   }
-}
+  /*}*/
