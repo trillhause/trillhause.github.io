@@ -449,20 +449,7 @@ iframe {
 }
 
 .social-images {
-  width: 60%;
-}
-
-.trademark {
-  font-family: avenir;
-  font-weight: 300;
-  font-size: 0.7em;
-  letter-spacing: 2px;
-  color: #333333
-}
-
-.trademark-container {
-  padding: 3%;
-  padding-left: 20px
+  width: 70%;
 }
 
 
@@ -526,6 +513,9 @@ iframe {
   .thankyou-outer,
   .error-outer {
     border-top: 1px solid;
+  }
+  .footer {
+    width: 100%
   }
 }
 
