@@ -1,4 +1,4 @@
-  html {
+html {
   color: #222;
   font-size: 1em;
   line-height: 1.4;
@@ -6,12 +6,12 @@
 
 
 /*
- * Remove text-shadow in selection highlight:
- * https://twitter.com/miketaylr/status/12228805301
- *
- * These selection rule sets have to be separate.
- * Customize the background color to match your design.
- */
+* Remove text-shadow in selection highlight:
+* https://twitter.com/miketaylr/status/12228805301
+*
+* These selection rule sets have to be separate.
+* Customize the background color to match your design.
+*/
 
 ::-moz-selection {
   background: #b3d4fc;
@@ -563,7 +563,7 @@ iframe {
 
 /*
  * Hide visually and from screen readers
- */
+*/
 
 .hidden {
   display: none !important;
@@ -702,10 +702,7 @@ ul {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
-  /*
-     * Printing Tables:
-     * http://css-discuss.incutio.com/wiki/Printing_Tables
-     */
+  /** Printing Tables:* http://css-discuss.incutio.com/wiki/Printing_Tables*/
   thead {
     display: table-header-group;
   }
@@ -726,4 +723,4 @@ ul {
   h3 {
     page-break-after: avoid;
   }
-  /*}*/
+}
