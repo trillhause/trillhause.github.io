@@ -199,7 +199,7 @@ angular.module('Portfolio').controller('WorkController', ['$sce', '$http', funct
     },
     {
       title: "Tron 2019",
-      content: $sce.trustAsHtml("<em>Around 300 sweaters with Tron 2019 design bought by Mechatronics Engineering class of 2019 at University of Waterloo. Asked multiple times by other tron classes to design one for thier year.</em><br><br> Tron 2019 was a design project undertaken during summer 2015 to create a brand for Mechatronics Engineeing class of 2019. This design reflects the core concepts of Mechatronics Engineering while keeping the mordern flat design in mind. Everything from selecting color schemes to finishing touches was done with excessive attention of detail.<br><br> Color scheme was this design was a challeges, as I wanted tron 2019 brand to go seamlessly with most popular sweater colors. After a long inspection, I was able to desing a perfect color scheme that worked with all the famous sweater colors. <br><br>Tron 2019 was a great success and is greatly appretiated by colleagues and friends to this date. Fellow trons are found wearing tron 2019 sweater/hoodie with pride. I am greatful to be a part of such a amazing movement and happy to bring smiles to hundreds of faces."),
+      content: $sce.trustAsHtml("<em>Around 300 sweaters with Tron 2019 design bought by Mechatronics Engineering class of 2019 at University of Waterloo. Asked multiple times by other tron classes to design one for their year.</em><br><br> Tron 2019 was a design project undertaken during summer 2015 to create a brand for Mechatronics Engineering class of 2019. This design reflects the core concepts of Mechatronics Engineering while keeping the modern flat design in mind. Everything from selecting color schemes to finishing touches was done with excessive attention of detail.<br><br> Color scheme was this design was a challenges, as I wanted tron 2019 brand to go seamlessly with most popular sweater colors. After a long inspection, I was able to design a perfect color scheme that worked with all the famous sweater colors. <br><br>Tron 2019 was a great success and is greatly appreciated by colleagues and friends to this date. Fellow trons are found wearing tron 2019 sweater/hoodie with pride. I am grateful to be a part of such a amazing movement and happy to bring smiles to hundreds of faces."),
       current: 0,
       images: [
         {
@@ -249,7 +249,7 @@ angular.module('Portfolio').controller('WorkController', ['$sce', '$http', funct
           id: 0,
           isVideo: false,
           tSource: "img/desk/0s.jpg",
-          source: "img/desk/0test.jpg"
+          source: "img/desk/0.jpg"
               },
         {
           id: 1,
