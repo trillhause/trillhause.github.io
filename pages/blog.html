@@ -1,6 +1,5 @@
-<div class="outer updates-outer">
-  <div ng-hide="updates.set" class="inner updates-inner">
-
+<div class="outer blog-outer">
+  <div class="inner blog-inner">
     <h2>Updates</h2>
     <br>
     <p>
@@ -12,26 +11,12 @@
       <br>
       <br><em>To read a article, select the desired topic</em>
     </p>
-    <div ng-repeat="article in updates.articles ">
-
-      <a href ng-click="updates.setArticle(article.id)">
+    <div ng-repeat="article in blog.articles ">
+      <a ng-href="#/articles/{{article.siteID}}">
         <h3>
         {{article.title}}
       </h3>
       </a>
-    </div>
-  </div>
-  <div ng-show=" article.isActive " ng-repeat="article in updates.articles ">
-
-    <h2>{{article.title}}</h2>
-    <br>
-    <div class="row ">
-      <div class="col-sm-9 updates-info " style="margin-bottom:10px ">
-        <p ng-bind-html="article.content "></p>
-        <a href ng-click="updates.unsetArticle(article.id) ">
-          <p><strong>Back</strong></p>
-        </a>
-      </div>
     </div>
   </div>
 </div>
