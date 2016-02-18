@@ -270,6 +270,33 @@ angular.module('Portfolio').controller('WorkController', ['$sce', '$http', funct
 
 angular.module('Portfolio').controller('BioController', function () {});
 
+angular.module('Portfolio').controller('ContactController', function () {
+    this.texttyping = ["Please fill all fields to submit the form"]
+  })
+  .directive('type', function () {
+    return {
+      restrict: 'E',
+      scope: {
+        strings: '='
+      },
+      template: '<span id="typed-output"></span>',
+      link: function ($scope, $element, $attrs) {
+        var options = {
+          strings: $scope.strings,
+          typeSpeed: 5,
+          loop: false,
+          contentType: "html",
+          showCursor: true,
+          loopCount: false,
+          cursorChar: "_"
+        };
+        $(function () {
+          $("#typed-output").typed(options);
+        });
+      }
+    };
+  });
+
 angular.module('Portfolio').controller('BlogController', ['$sce', '$location', '$anchorScroll', function ($sce, $location, $anchorScroll) {
   this.current = null;
   this.setArticle = function (value) {
@@ -296,29 +323,3 @@ angular.module('Portfolio').controller('BlogController', ['$sce', '$location', '
     },
   ];
 }]);
-
-angular.module('Portfolio').controller('ContactController', ['$http', function ($http) {
-  this.texttyping = ["Please fill all fields to submit the form"]
-    }]).directive('type', function () {
-  return {
-    restrict: 'E',
-    scope: {
-      strings: '='
-    },
-    template: '<span id="typed-output"></span>',
-    link: function ($scope, $element, $attrs) {
-      var options = {
-        strings: $scope.strings,
-        typeSpeed: 5,
-        loop: false,
-        contentType: "html",
-        showCursor: true,
-        loopCount: false,
-        cursorChar: "_"
-      };
-      $(function () {
-        $("#typed-output").typed(options);
-      });
-    }
-  };
-});
