@@ -308,7 +308,7 @@ angular.module('Portfolio').controller('BlogController', ['$sce', '$location', '
     this.set = false;
   }
 
-  this.articles = [
+  /*this.articles = [
     {
       siteID: "painter-to-engineer",
       title: "Painter to Engineer",
@@ -321,5 +321,5 @@ angular.module('Portfolio').controller('BlogController', ['$sce', '$location', '
       siteID: "turning-twenty-one",
       title: "Turning Twenty-One",
     },
-  ];
+  ];*/
 }]);
