@@ -2,7 +2,7 @@
 angular.module('Portfolio').controller('HomeController', function () {
   // create a message to display in our view
   this.message = 'Everyone come and see how good I look!';
-  this.texttyping = ["logically minded and creative at heart^5000", "design oriented developer^5000", "street smart engineer^5000"]
+  this.texttyping = ["3A Mechatronics engineer^10000", "dedicated programmer^4000", "logically minded and creative at heart^4000"]
 }).directive('typedjs', function () {
   return {
     restrict: 'E',
@@ -75,6 +75,20 @@ angular.module('Portfolio').controller('WorkController', ['$sce', '$http', funct
     return value === 1;
   }
   this.projects = [
+    {
+      title: "Cartora",
+      content: $sce.trustAsHtml("Cartora is a location sharing application for guests attending a shared event. The application allows participants of a calendar event to track fellow participants before the event starts. <br><br> The app: <br> - caluclates ETA of each participant <br> - notifies the host about late arrivals <br> - reminds the user to leave for the event based on their current location <br> - provides one tap rideshare to event venue with Uber and Lyft integration. <br><br> I developed a Rails API for Cartora to handle the server side of the application. The API follows RESTful design principles. <br><br> <a href='https://github.com/millingab/cartora/wiki' target=\"_blank\">&lang;Learn More&rang;</a>"),
+      current: 0,
+      images: [
+        {
+          id: 0,
+          isVideo: false,
+          tSource: "img/cartora/0_s.png",
+          source: "img/cartora/0.png"
+        }
+      ]
+    },
+
     {
       title: "Bricks and Bytes",
       content: $sce.trustAsHtml("<em>Bricks & Bytes was awarded second place at PCH Hackathon</em> <br><br>Bricks & Bytes is an innovative hardware platform that allows children to learn logic of programming, without the language. Bricks & Bytes was developed at PCH Hackathon in a collaboration with seven other mechatronics student. Project includes 7 interchangeable modules that stimulates computer science concepts with real I/O feedback. <br><br>Each module called brick contains an Arduino micro-controller board to manage peripherals and UART communication, with a  designated \"transmitter\" module relaying information to an Android/iOS device via Bluetooth 2.0. (Communication between bricks are established using UART with the last brick transmitting any results to an Android/iOS application via Bluetooth.) <br><br>The purpose of the project was to make programming feel more intuitive and organic, allowing young users to familiarize themselves with the fundamental principles of the software development such as control flow and debugging.<br><br> <a href='https://twitter.com/search?q=bricks%20%26%20bytes%20from%3APCHHackathon&src=typd&lang=en' target=\"_blank\">&lang;Learn More&rang;</a>"),
