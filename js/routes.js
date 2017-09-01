@@ -15,7 +15,7 @@ angular.module('Portfolio').config(function ($routeProvider) {
       controllerAs: 'work'
     })
     // route for the bio page
-    .when('/bio', {
+    .when('/about', {
       templateUrl: 'pages/bio.html',
       controller: 'BioController',
       controllerAs: 'bio'

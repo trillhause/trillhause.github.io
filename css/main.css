@@ -107,15 +107,15 @@ button:focus {
 }
 
 .outer h2 {
-  font-family: 'Source Sans Pro';
-  font-weight: 600;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 700;
   font-size: 1.5em;
   letter-spacing: 1px;
   color: #333333
 }
 
 .outer h3 {
-  font-family: 'Source Sans Pro';
+  font-family: 'Assistant', sans-serif;
   font-weight: 400;
   font-size: 1.2em;
   letter-spacing: 1px;
@@ -124,9 +124,9 @@ button:focus {
 }
 
 .outer p {
-  font-family: 'Source Sans Pro';
+  font-family: 'Assistant', sans-serif;
   font-size: 1.0em;
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: 0.7px;
   word-spacing: 5px;
   color: #333333;
@@ -226,7 +226,7 @@ h1 {
 }
 
 .home-outer h1 {
-  font-family: 'Lato';
+  font-family: 'Lato', sans-serif;
   font-weight: 900;
   font-size: 2em;
   letter-spacing: 10px;
@@ -234,16 +234,16 @@ h1 {
 }
 
 .home-outer p {
-  font-family: 'Lato';
-  font-weight: 300;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
   font-size: 1.2em;
   letter-spacing: 2px;
   color: #333333
 }
 
 typedjs {
-  font-family: 'Lato';
-  font-weight: 300;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
   font-size: 1.2em;
   letter-spacing: 3px;
   color: #333333
@@ -274,8 +274,8 @@ typedjs {
 .contact-form input {
   height: 2em;
   width: 50%;
-  font-family: 'Lato';
-  font-weight: 300;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
   font-size: 1.2em;
   letter-spacing: 2px;
   color: #333333;
@@ -293,8 +293,8 @@ typedjs {
 
 .contact-form textarea {
   width: 100%;
-  font-family: 'Lato';
-  font-weight: 300;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
   font-size: 1.2em;
   letter-spacing: 2px;
   color: #333333;
@@ -325,7 +325,7 @@ typedjs {
 /*thankyou.html and error.html*/
 
 typed {
-  font-family: 'Lato';
+  font-family: 'Lato', sans-serif;
   font-weight: 900;
   font-size: 2em;
   letter-spacing: 10px;
@@ -333,7 +333,7 @@ typed {
 }
 
 .error-outer h1 {
-  font-family: 'Lato';
+  font-family: 'Lato', sans-serif;
   font-weight: 900;
   font-size: 2em;
   letter-spacing: 10px;
@@ -342,8 +342,8 @@ typed {
 
 .thankyou-outer p,
 .error-outer p {
-  font-family: 'Lato';
-  font-weight: 300;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
   font-size: 1.2em;
   letter-spacing: 2px;
   color: #333333;
@@ -358,7 +358,7 @@ typed {
 }
 
 .blog-outer h3 {
-  font-family: 'Source Sans Pro';
+  font-family: 'Assistant', sans-serif;
   font-weight: 400;
   font-size: 1.2em;
   letter-spacing: 1px;
@@ -378,7 +378,7 @@ typed {
 /*work.html*/
 
 .work-outer a {
-  text-decoration: none;
+  text-decoration: underline;
   color: #333333
 }
 
@@ -479,8 +479,8 @@ iframe {
 /* Resoponsive Vertical Navbar */
 
 .sidebar-nav .navbar li a {
-  font-family: 'Lato';
-  font-weight: 300;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
   font-size: 1.1em;
   color: #222222;
   letter-spacing: 5px;
