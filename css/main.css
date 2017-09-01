@@ -451,16 +451,18 @@ iframe {
 /*footer*/
 
 .footer {
-  height: 30px;
+  height: 50px;
   position: fixed;
   background-color: white;
   bottom: 0;
-  right: 0px;
+  right: 10px;
+  padding-left: 15px;
+  padding-top: 5px
 }
 
 .social-container {
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   display: inline-block;
   float: right;
   display: -webkit-flex;
@@ -501,7 +503,7 @@ iframe {
   position: fixed;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 780px) {
   .brand-image {
     width: 8em;
   }
@@ -541,7 +543,7 @@ iframe {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 780px) {
   /*
   .sidebar-nav .navbar .navbar-collapse {
     padding: 0;
@@ -576,9 +578,6 @@ iframe {
   .home-outer,
   .thankyou-outer {
     border-left: 1px solid;
-  }
-  .contact-outer .form-container {
-    padding-left: 7%
   }
 }
 

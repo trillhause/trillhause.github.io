@@ -2,7 +2,7 @@
 angular.module('Portfolio').controller('HomeController', function () {
   // create a message to display in our view
   this.message = 'Everyone come and see how good I look!';
-  this.texttyping = ["3A Mechatronics engineer^10000", "dedicated programmer^4000", "logically minded and creative at heart^4000"]
+  this.texttyping = ["3B Mechatronics engineer^4000", "Specializing in Robotics and AI^4000", "Loves videography^4000"]
 }).directive('typedjs', function () {
   return {
     restrict: 'E',
@@ -76,19 +76,60 @@ angular.module('Portfolio').controller('WorkController', ['$sce', '$http', funct
   }
   this.projects = [
     {
-      title: "Cartora",
-      content: $sce.trustAsHtml("Cartora is a location sharing application for guests attending a shared event. The application allows participants of a calendar event to track fellow participants before the event starts. <br><br> The app: <br> - caluclates ETA of each participant <br> - notifies the host about late arrivals <br> - reminds the user to leave for the event based on their current location <br> - provides one tap rideshare to event venue with Uber and Lyft integration. <br><br> I developed a Rails API for Cartora to handle the server side of the application. The API follows RESTful design principles. <br><br> <a href='https://github.com/millingab/cartora/wiki' target=\"_blank\">&lang;Learn More&rang;</a>"),
+      title: "deeps",
+      content: $sce.trustAsHtml("deeps solves <a href='https://twitter.com/comma_ai/status/849131721572327424?lang=en'>&lang;Comma.ai's speed challenge&rang;</a>. It uses optical flow analysis and convolutional neural networks to estimate the speed of a car from dashcam footage. <br><br> It uses OpenCV to process the video and find the relational distances between two frames, it then uses the time difference between the frames to calculate the speed.<br><br><em>deeps performed exceptionally better than the other models. Final mean square error on test data was 3.48</em><br><br> <a href='https://github.com/millingab/deeps' target=\"_blank\">&lang;Learn More&rang;</a> <br> <a href='https://github.com/millingab/deeps/blob/master/Full%20Article.md' target=\"_blank\">&lang;Full Article&rang;</a>"),
       current: 0,
       images: [
         {
           id: 0,
           isVideo: false,
-          tSource: "img/cartora/0_s.png",
-          source: "img/cartora/0.png"
+          tSource: "img/deeps/1_s.jpg",
+          source: "img/deeps/1.jpg"
+        },
+        {
+          id: 1,
+          isVideo: false,
+          tSource: "img/deeps/2_s.jpg",
+          source: "img/deeps/2.jpg"
+        },
+        {
+          id: 2,
+          isVideo: false,
+          tSource: "img/deeps/3_s.jpg",
+          source: "img/deeps/3.jpg"
+        },
+        {
+          id: 3,
+          isVideo: false,
+          tSource: "img/deeps/4_s.jpg",
+          source: "img/deeps/4.jpg"
+        },
+        {
+          id: 4,
+          isVideo: true,
+          tSource: "img/deeps/0_s.jpg",
+          vsource: $sce.trustAsResourceUrl("https://www.youtube.com/embed/LUTn_I52SMQ?controls=2"),
+        },
+        {
+          id: 5,
+          isVideo: false,
+          tSource: "img/deeps/5_s.jpg",
+          source: "img/deeps/5.jpg"
+        },
+        {
+          id: 6,
+          isVideo: false,
+          tSource: "img/deeps/6_s.jpg",
+          source: "img/deeps/6.jpg"
+        },
+        {
+          id: 7,
+          isVideo: false,
+          tSource: "img/deeps/7_s.jpg",
+          source: "img/deeps/7.jpg"
         }
       ]
     },
-
     {
       title: "Bricks and Bytes",
       content: $sce.trustAsHtml("<em>Bricks & Bytes was awarded second place at PCH Hackathon</em> <br><br>Bricks & Bytes is an innovative hardware platform that allows children to learn logic of programming, without the language. Bricks & Bytes was developed at PCH Hackathon in a collaboration with seven other mechatronics student. Project includes 7 interchangeable modules that stimulates computer science concepts with real I/O feedback. <br><br>Each module called brick contains an Arduino micro-controller board to manage peripherals and UART communication, with a  designated \"transmitter\" module relaying information to an Android/iOS device via Bluetooth 2.0. (Communication between bricks are established using UART with the last brick transmitting any results to an Android/iOS application via Bluetooth.) <br><br>The purpose of the project was to make programming feel more intuitive and organic, allowing young users to familiarize themselves with the fundamental principles of the software development such as control flow and debugging.<br><br> <a href='https://twitter.com/search?q=bricks%20%26%20bytes%20from%3APCHHackathon&src=typd&lang=en' target=\"_blank\">&lang;Learn More&rang;</a>"),
@@ -143,7 +184,7 @@ angular.module('Portfolio').controller('WorkController', ['$sce', '$http', funct
           vsource: $sce.trustAsResourceUrl("http://www.youtube.com/embed/RUrxql83HLA?controls=2"),
         },
       ],
-    },
+          },
     {
       title: "uClicker",
       content: $sce.trustAsHtml("uClicker is a portable hardware platform that allows students to answer iClicker questions from their phones. <br><br> uClicker was developed at Hack The North 2015 in collaboration with two other engineering students. It uses an Arduino micro-controller board, an RF Link transmitter and an RF Link receiver. <br><br>When the user selects an option (options can be selected using an Android app), signals are sent to the iClicker base station using the RF Link transmitter. The RF Link receiver then reads data from the base station and other iClickers which adds more features like finding  the most selected answer, mass changing/randomizing other student's answers, jamming signals during a question, etc. Using our open source platform, users are able to hack and customize their uClicker with desired functionalities. <br><br>The purpose of this project was to find an affordable alternative to iClicker and now it is possible with uClicker. <br><br> <a href='https://github.com/millingab/uClicker' target=\"_blank\">&lang;Learn More&rang;</a>"),
@@ -186,6 +227,19 @@ angular.module('Portfolio').controller('WorkController', ['$sce', '$http', funct
           source: "img/uclicker/5.jpg"
         },
       ],
+          },
+    {
+      title: "Cartora",
+      content: $sce.trustAsHtml("Cartora is a location sharing application for guests attending a shared event. The application allows participants of a calendar event to track fellow participants before the event starts. <br><br> The app: <br> - caluclates ETA of each participant <br> - notifies the host about late arrivals <br> - reminds the user to leave for the event based on their current location <br> - provides one tap rideshare to event venue with Uber and Lyft integration. <br><br> I developed a Rails API for Cartora to handle the server side of the application. The API follows RESTful design principles. <br><br> <a href='https://github.com/millingab/cartora/wiki' target=\"_blank\">&lang;Learn More&rang;</a>"),
+      current: 0,
+      images: [
+        {
+          id: 0,
+          isVideo: false,
+          tSource: "img/cartora/0_s.png",
+          source: "img/cartora/0.png"
+        }
+      ]
     },
     {
       title: "Myosic",
@@ -198,7 +252,7 @@ angular.module('Portfolio').controller('WorkController', ['$sce', '$http', funct
           source: "img/myosic/0.png"
         }
       ],
-    },
+          },
     {
       title: "Wanderlust",
       content: $sce.trustAsHtml("<em>Wanderlust received Windows Sponsorship award at YHack. </em><br><br>This multiplayer - motion control - first person shooting game was a inspired by interest in motion control and passion for technology. Utilizing Kinect's powerful skeletal tracking system, we were able to provide game controls purely using body motion. <br><br>Environment for game is created using  Unity engine and scripting for environment and players is done in C# using Unity Environment. Game servers were hosted on Windows Azure.<br><br> <a href='http://devpost.com/software/wanderlust-rqr0j' target=\"_blank\">&lang;Learn More&rang;</a>"),
@@ -210,7 +264,7 @@ angular.module('Portfolio').controller('WorkController', ['$sce', '$http', funct
           source: "img/wanderlust/0.jpg"
         },
       ],
-    },
+          },
     {
       title: "Tron 2019",
       content: $sce.trustAsHtml("<em>Around 300 sweaters with Tron 2019 design bought by Mechatronics Engineering class of 2019 at University of Waterloo. Asked multiple times by other tron classes to design one for their year.</em><br><br> Tron 2019 was a design project undertaken during summer 2015 to create a brand for Mechatronics Engineering class of 2019. This design reflects the core concepts of Mechatronics Engineering while keeping the modern flat design in mind. Everything from selecting color schemes to finishing touches was done with excessive attention of detail.<br><br> Color scheme was this design was a challenges, as I wanted tron 2019 brand to go seamlessly with most popular sweater colors. After a long inspection, I was able to design a perfect color scheme that worked with all the famous sweater colors. <br><br>Tron 2019 was a great success and is greatly appreciated by colleagues and friends to this date. Fellow trons are found wearing tron 2019 sweater/hoodie with pride. I am grateful to be a part of such a amazing movement and happy to bring smiles to hundreds of faces.<br><br> <a href='https://www.instagram.com/explore/tags/tron2019/' target=\"_blank\">&lang;Learn More&rang;</a>"),
@@ -254,31 +308,6 @@ angular.module('Portfolio').controller('WorkController', ['$sce', '$http', funct
         },
       ],
     },
-    {
-      title: "Desk",
-      content: $sce.trustAsHtml("Desk is a photography project conducted during moving houses. It does a excellent job of defining me by demonstration of my quotidian tools. These tools are a extended part of me and are of extreme importance.<br><br> <a href='https://www.instagram.com/p/zbVaPJhTIz/' target=\"_blank\">&lang;Learn More&rang;</a>"),
-      current: 0,
-      images: [
-        {
-          id: 0,
-          isVideo: false,
-          tSource: "img/desk/0s.jpg",
-          source: "img/desk/0.jpg"
-              },
-        {
-          id: 1,
-          isVideo: false,
-          tSource: "img/desk/1s.jpg",
-          source: "img/desk/1.jpg"
-                },
-        {
-          id: 2,
-          isVideo: false,
-          tSource: "img/desk/2s.jpg",
-          source: "img/desk/2.jpg",
-        }
-      ]
-    }
   ]
 }]);
 
