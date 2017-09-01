@@ -457,7 +457,8 @@ iframe {
   bottom: 0;
   right: 10px;
   padding-left: 15px;
-  padding-top: 5px
+  padding-top: 5px;
+  width: 100%
 }
 
 .social-container {
@@ -537,9 +538,6 @@ iframe {
   .thankyou-outer,
   .error-outer {
     border-top: 1px solid;
-  }
-  .footer {
-    width: 100%
   }
 }
 
