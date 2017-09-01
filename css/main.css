@@ -503,7 +503,7 @@ iframe {
   position: fixed;
 }
 
-@media (max-width: 780px) {
+@media (max-width: 800px) {
   .brand-image {
     width: 8em;
   }
@@ -543,7 +543,7 @@ iframe {
   }
 }
 
-@media (min-width: 780px) {
+@media (min-width: 800px) {
   /*
   .sidebar-nav .navbar .navbar-collapse {
     padding: 0;
