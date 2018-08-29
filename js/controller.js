@@ -2,7 +2,7 @@
 angular.module('Portfolio').controller('HomeController', function () {
   // create a message to display in our view
   this.message = 'Everyone come and see how good I look!';
-  this.texttyping = ["3B Mechatronics engineer^4000", "Specializing in Robotics and AI^4000", "Loves videography^4000"]
+  this.texttyping = ["4A Mechatronics Engineer^4000", "Specializing in AI and Robotics^4000", "Tech Enthusiast^4000"]
 }).directive('typedjs', function () {
   return {
     restrict: 'E',
