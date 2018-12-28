@@ -1,8 +1,8 @@
 // create the controller and inject Angular's $scope
 angular.module('Portfolio').controller('HomeController', function () {
   // create a message to display in our view
-  this.message = 'Everyone come and see how good I look!';
-  this.texttyping = ["4A Mechatronics Engineer^4000", "Specializing in AI and Robotics^4000", "Tech Enthusiast^4000"]
+  this.message = 'Description';
+  this.texttyping = ["Tech Entrepreneur & Enthusiast^4000", "Mechatronics Engineer, University of Waterloo^4000", "Specialized in AI and Robotics^4000" ]
 }).directive('typedjs', function () {
   return {
     restrict: 'E',
@@ -75,6 +75,37 @@ angular.module('Portfolio').controller('WorkController', ['$sce', '$http', funct
     return value === 1;
   }
   this.projects = [
+    {
+      title: "Raven",
+      content: $sce.trustAsHtml("Drones have pushed the boundary of visual data collection in the past decade. Industries are relying on drones more than ever for large-scale data collection for tasks like monitoring. Raven explores industrial drone applications beyond monitoring. <br><br>Raven reconstructs a 3D structure using multiview 2D images of it. It can be implemented on a drone and scan a structure via a flyby.  Raven uses segmentation to identify the structure and performs stereo reconstruction using volumetric graph cuts on the visual hull to create a 3D model. A 3D reconstruction like Raven can be useful in many industries, eg. – mining, construction, movie production, gaming, etc.<br><br><em>Note: One can explore the possible drone applications by thinking of it as an automated camera positioning system.</em> <a href='https://github.com/millingab/multiview-stereo/blob/master/Project.ipynb' target=\"_blank\">Learn More</a> <br>"),
+      current: 0,
+      images: [
+        {
+          id: 0,
+          isVideo: false,
+          tSource: "img/raven/1_s.jpg",
+          source: "img/raven/1.jpg"
+        },
+        {
+          id: 1,
+          isVideo: false,
+          tSource: "img/deeps/2_s.jpg",
+          source: "img/deeps/2.jpg"
+        },
+        {
+          id: 2,
+          isVideo: false,
+          tSource: "img/deeps/3_s.jpg",
+          source: "img/deeps/3.jpg"
+        },
+        {
+          id: 3,
+          isVideo: false,
+          tSource: "img/deeps/4_s.jpg",
+          source: "img/deeps/4.jpg"
+        }
+      ]
+    },
     {
       title: "deeps",
       content: $sce.trustAsHtml("LIDARs are great for localizing and mapping but they are quite expensive and this drives up the cost of a car significantly. Consumer facing companies like Tesla and Comma.ai thus have to rely on cameras and sensors to make the vehicle autonomous. There is a great value for the autonomous industry in training computers from a video input.<br><br> deeps tries to solves that. It uses optical flow analysis and convolutional neural networks to estimate the speed of a car from dashcam footage. It uses OpenCV  for video processing and optical flow analysis and implements an end to end architecture based on <a href='https://arxiv.org/pdf/1604.07316v1.pdf' target='_blank'>Nvidia’s paper</a> for training.<br><br> Check out the <a href='https://github.com/millingab/deeps/blob/master/Full%20Article.md' target=\"_blank\">full article</a> to learn more about the data processing and training parameters used in deeps.<br><br><em>According to Comma.ai, a Mean Square Error (MSE) of 3 mph is considered as an exceptional performance. deeps final MSE on the test set was 3.4 mphs</em><br><br> <a href='https://github.com/millingab/deeps' target=\"_blank\">Learn More</a> <br>"),
@@ -350,19 +381,4 @@ angular.module('Portfolio').controller('BlogController', ['$sce', '$location', '
     this.articles[value].isActive = !this.articles[value].isActive;
     this.set = false;
   }
-
-  /*this.articles = [
-    {
-      siteID: "painter-to-engineer",
-      title: "Painter to Engineer",
-    },
-    {
-      siteID: "life-is-short",
-      title: "Life is Short",
-    },
-    {
-      siteID: "turning-twenty-one",
-      title: "Turning Twenty-One",
-    },
-  ];*/
 }]);
