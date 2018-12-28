@@ -89,20 +89,20 @@ angular.module('Portfolio').controller('WorkController', ['$sce', '$http', funct
         {
           id: 1,
           isVideo: false,
-          tSource: "img/deeps/2_s.jpg",
-          source: "img/deeps/2.jpg"
+          tSource: "img/raven/2_s.jpg",
+          source: "img/raven/2.jpg"
         },
         {
           id: 2,
           isVideo: false,
-          tSource: "img/deeps/3_s.jpg",
-          source: "img/deeps/3.jpg"
+          tSource: "img/raven/3_s.jpg",
+          source: "img/raven/3.jpg"
         },
         {
           id: 3,
           isVideo: false,
-          tSource: "img/deeps/4_s.jpg",
-          source: "img/deeps/4.jpg"
+          tSource: "img/raven/4_s.jpg",
+          source: "img/raven/4.jpg"
         }
       ]
     },
