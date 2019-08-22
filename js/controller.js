@@ -75,6 +75,25 @@ angular.module('Portfolio').controller('WorkController', ['$sce', '$http', funct
     return value === 1;
   }
   this.projects = [
+      {
+      title: "Pixel agent",
+      content: $sce.trustAsHtml("This paper applies various reinforcement learning techniques to a side scrolling game called Pixelcopter, namely Q tables with sparse and dense discretization as well as Double Deep Q Learning. The motivation is to characterize and understand the Artificial Neural Network based improvements to table based Q-learning agents in continuous state domains.<br><br> In the Pixelcopter environment, we conduct experiments with each reinforcement learning agent to quantify and compare performance with respect to reward, model convergence time, and model size. We also explore Q table discretization issues that deep Q learning agents avoid to achieve significantly better performance. The results demonstrate the potential of deep Q learning for reinforcement learning in applications with continuous domains with high dimensionality, such as autonomous navigation. <br><br><a href='https://github.com/millingab/pixelcopter-rl/blob/master/pixelcopter_rl.pdf' target=\"_blank\">Learn More</a> <br>"),
+      current: 0,
+      images: [
+           {
+          id: 0,
+          isVideo: false,
+          tSource: "img/pixel-agent/1_s.png",
+          source: "img/pixel-agent/1.png"
+        },
+        {
+          id: 1,
+          isVideo: false,
+          tSource: "img/pixel-agent/2_s.png",
+          source: "img/pixel-agent/2.png"
+        },
+      ]
+    },
     {
       title: "Raven",
       content: $sce.trustAsHtml("Drones have pushed the boundary of visual data collection in the past decade. Industries are relying on drones more than ever for large-scale data collection through monitoring. Raven explores industrial drone applications of a drone beyond monitoring. <br><br>Raven reconstructs a 3D model using multiview 2D images of a structure. It can be implemented on a drone to scan a structure via a flyby.  Raven uses segmentation to identify the structure and performs stereo reconstruction using volumetric graph cuts on the visual hull to create the 3D model. A 3D reconstruction like Raven can be used in industries like – mining, construction, movie production, gaming, etc.<br><br><em>Note: One can explore the possible drone applications by thinking of it as an automated camera rig.</em><br><br> <a href='https://github.com/millingab/multiview-stereo/blob/master/Project.ipynb' target=\"_blank\">Learn More</a> <br>"),

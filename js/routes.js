@@ -37,6 +37,9 @@ angular.module('Portfolio').config(function ($routeProvider) {
       controller: 'ThankController',
       controllerAs: 'thank'
     })
+    .when('/pixelcopter', {
+      templateUrl: 'pages/pixelcopter_rl.html',
+  })
     .when('/articles/:siteID', {
       templateUrl: function (urlattr) {
         console.log(urlattr.siteID);
